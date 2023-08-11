@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
+public enum WeaponType
+{
+    None,
+    /// <summary>
+    /// 검
+    /// </summary>
+    Sword,
+    /// <summary>
+    /// 방패
+    /// </summary>
+    Shield,
+    /// <summary>
+    /// 도끼
+    /// </summary>
+    Axe,
+    /// <summary>
+    /// 차크람
+    /// </summary>
+    Chakram,
+    /// <summary>
+    /// 폭탄
+    /// </summary>
+    Bomb,
+    /// <summary>
+    /// 포션
+    /// </summary>
+    Potion,
+    /// <summary>
+    /// 마법 스크롤
+    /// </summary>
+    MagicScroll,
+    /// <summary>
+    /// 대 검
+    /// </summary>
+    GreatSword,
+}
