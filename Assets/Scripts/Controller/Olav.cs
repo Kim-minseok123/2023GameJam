@@ -21,6 +21,22 @@ public class Olav : BaseController
     }
     public override void UseSkill()
     {
+       
         // ´«µ¢ÀÌ ºí·° Ã¼Å©
+        if (_isRight) {
+            Collider2D cd = Physics2D.OverlapBox(transform.position + new Vector3(2f,0,0),new Vector2(1,0.1f),0);
+            if (cd == null) return;
+            if (cd.gameObject.CompareTag("SnowBlock")) {
+                Debug.Log("s");
+            }
+        }
+        else if(!_isRight){
+            Collider2D cd = Physics2D.OverlapBox(transform.position + new Vector3(-2f, 0, 0), new Vector2(1, 0.1f), 0);
+            if (cd == null) return;
+            if (cd.gameObject.CompareTag("SnowBlock"))
+            {
+                Debug.Log("s");
+            }
+        }
     }
 }

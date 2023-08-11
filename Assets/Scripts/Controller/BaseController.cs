@@ -6,7 +6,7 @@ public class BaseController : MonoBehaviour
 {
     public float _speed = 5f;
     private float _moveInput;
-    private bool _isRight = true;
+    protected bool _isRight = true;
 
     public float _jumpForce = 6f;
     public float _checkRadius = 0.2f;

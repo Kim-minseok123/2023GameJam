@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     }
     public void Start()
     {
-        SpawnPlayer("Oscar");
+        SpawnPlayer("Olav");
     }
     public void Update()
     {
@@ -42,10 +42,10 @@ public class GameManager : MonoBehaviour
                 elapsedTime -= timeToReduce;  // 경과 시간을 재설정 (이것은 경과 시간을 0으로 초기화하는 것보다 오버플로우를 방지)
             }
 
-            if (ColdGauge == 290)
+            if (ColdGauge <=0)
             {
-                //ColdGauge = 0;
-                SpawnPlayer("Hansen");
+                ColdGauge = 0;
+                //SpawnPlayer("Hansen");
             }
             Debug.Log(ColdGauge);
         }
