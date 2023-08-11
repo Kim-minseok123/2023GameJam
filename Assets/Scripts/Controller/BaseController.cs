@@ -13,13 +13,18 @@ public class BaseController : MonoBehaviour
     private bool _isGrounded;
     public Transform _groundCheck;
     public LayerMask _groundLayer;
-
+    private bool _isJumping = false;
+    public Animator animator;
     private Rigidbody2D _rb;
 
     public float _coldGaugeReduced = 1;
+
+    private bool prevGround;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _groundLayer);
+        prevGround = _isGrounded;
     }
 
     void FixedUpdate()
@@ -31,16 +36,33 @@ public class BaseController : MonoBehaviour
 
         if (_moveInput > 0 && !_isRight)
         {
+            animator.SetBool("Walk", true);
             Flip();
         }
-        else if (_moveInput < 0 && _isRight) {
+        else if (_moveInput < 0 && _isRight)
+        {
+            animator.SetBool("Walk", true);
             Flip();
         }
+        if (_moveInput == 0)
+        {
+            animator.SetBool("Walk", false);
+        }
+        if (!_isGrounded && !_isJumping) {
+            animator.SetTrigger("Air");
+        }
+        if (_isGrounded && _isGrounded != prevGround) {
+            animator.SetTrigger("Ground");
+            _isJumping = false;
+        }
+        prevGround = _isGrounded;
     }
     public virtual void Update()
     {
         if (Input.GetKeyDown(KeyCode.W) && _isGrounded) {
             _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+            animator.SetTrigger("Jump");
+            _isJumping = true;
         }
     }
 

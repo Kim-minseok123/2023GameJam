@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed1f7e480729c946ba807d5ef58d50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
-  _jumpForce: 6
+  _speed: 6
+  _jumpForce: 6.5
   _checkRadius: 0.2
   _groundCheck: {fileID: 2784102013076866018}
   _groundLayer:
