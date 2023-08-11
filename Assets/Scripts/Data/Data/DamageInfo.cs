@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
-using Org.BouncyCastle.Asn1.Mozilla;
 
 [System.Serializable]
 public struct DamageInfo
