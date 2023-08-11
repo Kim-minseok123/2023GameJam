@@ -31,15 +31,6 @@ public class UITitleView : UIBaseView
         }
     }
 
-    public void EnterGame()
-    {
-        SceneLoader.Instance.SwitchScene("MainScene");
-    }
-
-    public void EnterCreadit() {
-        SceneLoader.Instance.SwitchDirectScene("CreditScene");
-    }
-
     public void ExitGame()
     {
 #if UNITY_EDITOR
