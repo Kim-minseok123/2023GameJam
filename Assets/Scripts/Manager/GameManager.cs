@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
                 ColdGauge = 0;
                 //SpawnPlayer("Hansen");
             }
-            Debug.Log(ColdGauge);
+            //Debug.Log(ColdGauge);
         }
     }
 
