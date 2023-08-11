@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class BaseController : MonoBehaviour
 {
-    public float _speed;
+    public float _speed = 5f;
     private float _moveInput;
     private bool _isRight = true;
 
-    public float _jumpForce;
-    public float _checkRadius;
+    public float _jumpForce = 6f;
+    public float _checkRadius = 0.2f;
     private bool _isGrounded;
     public Transform _groundCheck;
     public LayerMask _groundLayer;
 
     private Rigidbody2D _rb;
+
+    public int _coldGaugeReduced;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -35,7 +37,7 @@ public class BaseController : MonoBehaviour
             Flip();
         }
     }
-    private void Update()
+    public virtual void Update()
     {
         if (Input.GetKeyDown(KeyCode.W) && _isGrounded) {
             _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
@@ -49,4 +51,5 @@ public class BaseController : MonoBehaviour
         transform.localScale = scale;
     }
     public virtual void UseSkill() { }
+    public virtual void ChangeCharacter() { }
 }
