@@ -11,7 +11,7 @@ public class GameInitializer : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 60;        
-        SceneLoader.Instance.SwitchScene(nextScene, false);
+        SceneLoader.Instance.SwitchDirectScene(nextScene, false);
     }
 
 }

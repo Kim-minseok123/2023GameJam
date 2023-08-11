@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d52c67487f94c41b666d412b7b76ca, type: 3}
+  m_Name: MouseEnemyStatusInfoData 1
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  statusDic:
+    keys: 64000000650000006600000067000000c8000000c9000000ca000000cb000000cc0000002c0100002d0100002e0100009001000091010000f4010000f5010000f60100005802000059020000bc020000bd020000be02000020030000210300008403000085030000
+    values:
+    - type: 100
+      name: HP
+      amount: 10000
+      percent: 0
+    - type: 101
+      name: MaxHP
+      amount: 10000
+      percent: 0
+    - type: 102
+      name: RecoverHP
+      amount: 0
+      percent: 0
+    - type: 103
+      name: AbsorptionHP
+      amount: 0
+      percent: 0
+    - type: 200
+      name: MP
+      amount: 0
+      percent: 0
+    - type: 201
+      name: MaxMP
+      amount: 0
+      percent: 0
+    - type: 202
+      name: RecoverMP
+      amount: 0
+      percent: 0
+    - type: 203
+      name: AbsorptionMP
+      amount: 0
+      percent: 0
+    - type: 204
+      name: SkillSpendMP
+      amount: 0
+      percent: 0
+    - type: 300
+      name: MinAttackPower
+      amount: 10
+      percent: 0
+    - type: 301
+      name: MaxAttackPower
+      amount: 100
+      percent: 0
+    - type: 302
+      name: SkillAttackPower
+      amount: 0
+      percent: 0
+    - type: 400
+      name: CriticalPercent
+      amount: 0
+      percent: 0
+    - type: 401
+      name: CriticalAttackPower
+      amount: 0
+      percent: 0
+    - type: 500
+      name: Defence
+      amount: 0
+      percent: 0
+    - type: 501
+      name: DefenceCrowd
+      amount: 0
+      percent: 0
+    - type: 502
+      name: DefenceElemental
+      amount: 0
+      percent: 0
+    - type: 600
+      name: AttackSpeed
+      amount: 1
+      percent: 0
+    - type: 601
+      name: AttackDistance
+      amount: 0
+      percent: 0
+    - type: 700
+      name: MoveSpeed
+      amount: 10
+      percent: 0
+    - type: 701
+      name: JumpPower
+      amount: 0
+      percent: 0
+    - type: 702
+      name: SkillCoolTime
+      amount: 0
+      percent: 0
+    - type: 800
+      name: Health
+      amount: 0
+      percent: 0
+    - type: 801
+      name: MaxHealth
+      amount: 0
+      percent: 0
+    - type: 900
+      name: Condition
+      amount: 0
+      percent: 0
+    - type: 901
+      name: MaxCondition
+      amount: 0
+      percent: 0

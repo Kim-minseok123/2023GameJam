@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a37fee47aad1694ebb64d74d41a1e5f, type: 3}
+  m_Name: PrefabContainer_SpiritCommon
+  m_EditorClassIdentifier: 
+  prefabDic:
+    keys:
+    - Hit
+    - Idle
+    - Chase
+    - Return
+    values:
+    - {fileID: 6773507068006079791, guid: 5b7de2b427da9394a8b34ae2fc768fc5, type: 3}
+    - {fileID: 8124075661268691455, guid: b4fa96875abeb5546a9e5f451d6fab90, type: 3}
+    - {fileID: 2479119929818946977, guid: 154dc393058fcd141b5aee3330c5e555, type: 3}
+    - {fileID: 7036212149249911047, guid: ed180cb64c3fb5c46b7e1b7248138520, type: 3}

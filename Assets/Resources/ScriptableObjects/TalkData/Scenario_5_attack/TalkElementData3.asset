@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2375ed6934bd71e4b890bad9d42c984d, type: 3}
+  m_Name: TalkElementData3
+  m_EditorClassIdentifier: 
+  index: 0
+  type: 0
+  characterName: Messess
+  talk: "\uC5F0\uC18D\uC73C\uB85C \uB204\uB974\uBA74 \uBE60\uB974\uAC8C \uC774\uC5B4\uC11C
+    \uACF5\uACA9\uD560 \uC218 \uC788\uC73C\uB2C8 \uCC38\uACE0\uD558\uC138\uC694."
+  character: {fileID: 21300000, guid: a88181c2206b32848855ef9c7bec623f, type: 3}
+  characterStandAnchor: 1

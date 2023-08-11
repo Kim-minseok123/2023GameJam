@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93328a0ca968af94484c14b40ca95b9f, type: 3}
+  m_Name: ScenarioData
+  m_EditorClassIdentifier: 
+  talkElementDataList:
+  - {fileID: 11400000, guid: 4dbac0f4eb848f64dbb5db983fac433b, type: 2}
+  - {fileID: 11400000, guid: 3a177322c389706429c2c8eaf6be5251, type: 2}
+  - {fileID: 11400000, guid: 3e9f9181f6455cb4e827d530374ae923, type: 2}
+  - {fileID: 11400000, guid: 1d399dec1a070644cae3c7922bd61ed3, type: 2}
+  - {fileID: 11400000, guid: f18f265fc43f5544ca87303a49394bf9, type: 2}
+  - {fileID: 11400000, guid: 6605761949d26424ca809f1a94e51890, type: 2}
+  - {fileID: 11400000, guid: d265fcdde209a4d4cb1fe2d369151e71, type: 2}
+  - {fileID: 11400000, guid: abe84d9002fcf634b9954365a03e019f, type: 2}
+  - {fileID: 11400000, guid: c780c10bbe271c74788b8ec4f77b025a, type: 2}

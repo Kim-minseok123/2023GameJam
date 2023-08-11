@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f372bb7c2a4062a9899d854ffde83c, type: 3}
+  m_Name: CameraShakeProfile
+  m_EditorClassIdentifier: 
+  SerializableDictionary:
+    keys:
+    - JustDash
+    - BackAttack
+    - Hit
+    - ChargeAttack
+    values:
+    - {fileID: 11400000, guid: 02c7686463289fb4bb7977bbfc42103b, type: 2}
+    - {fileID: 11400000, guid: 67de90910e9776f49b67f1ffdf1be812, type: 2}
+    - {fileID: 11400000, guid: 057ef140bda5c7f4aa26b78b4ac47bab, type: 2}
+    - {fileID: 11400000, guid: e0355bfb2cedf274dbfbe5670721c381, type: 2}

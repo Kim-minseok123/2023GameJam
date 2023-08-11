@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a37fee47aad1694ebb64d74d41a1e5f, type: 3}
+  m_Name: PrefabContainer_PlayerAttackCombo3
+  m_EditorClassIdentifier: 
+  prefabDic:
+    keys:
+    - Attack
+    - Hit
+    - Dust
+    - BrakingDust
+    values:
+    - {fileID: 7991214820326407093, guid: 2bd51af2660e91e4e9e3c2712af64e22, type: 3}
+    - {fileID: 8496273453980107512, guid: 499c7484d0f3e8a4296c2f4c19b9d8ca, type: 3}
+    - {fileID: 7504164148257835568, guid: 03e9be6105b7abc45b41552ae33b9bd0, type: 3}
+    - {fileID: 191241112031503502, guid: be77e47d9a84ba046a6475ec908cedeb, type: 3}

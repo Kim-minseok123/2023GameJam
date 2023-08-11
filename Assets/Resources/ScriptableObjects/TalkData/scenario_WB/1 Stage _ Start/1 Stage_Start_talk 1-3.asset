@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2375ed6934bd71e4b890bad9d42c984d, type: 3}
+  m_Name: 1 Stage_Start_talk 1-3
+  m_EditorClassIdentifier: 
+  index: 0
+  type: 0
+  characterName: "\uC8FC\uC778\uACF5"
+  talk: "\uC73C.. \uC5B4\uC9C0\uB7EC\uC6CC.. \uC2E0\uC774 \uB4DC\uB514\uC5B4 \uC9C0\uAD6C\uB97C
+    \uD68C\uC804 \uBAA9\uB9C8\uB85C \uB9CC\uB4E4\uC5C8\uB098\uBD10.. \uC138\uC0C1\uC774
+    \uB3CC\uACE0\uC788\uC5B4.."
+  character: {fileID: 0}
+  characterStandAnchor: 0

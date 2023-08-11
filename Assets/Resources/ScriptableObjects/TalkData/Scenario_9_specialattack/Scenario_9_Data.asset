@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93328a0ca968af94484c14b40ca95b9f, type: 3}
+  m_Name: Scenario_9_Data
+  m_EditorClassIdentifier: 
+  talkElementDataList:
+  - {fileID: 11400000, guid: 13755b16f81f1b14cbcf9ea89b9dadf6, type: 2}
+  - {fileID: 11400000, guid: e396a69dc30f4074e8cca00858190368, type: 2}
+  - {fileID: 11400000, guid: 52d807921701eb74facd196f14b3c45b, type: 2}
+  - {fileID: 11400000, guid: e7a976567e9081b4a986306118f2e44f, type: 2}
+  - {fileID: 11400000, guid: 94c36f1560ef81c428c90592ef6d6f6a, type: 2}
+  - {fileID: 11400000, guid: 57d7c9fa736bdf3499b4611b9b710289, type: 2}
+  - {fileID: 11400000, guid: 1b49f548342b5794aacc7da3f1a25f84, type: 2}
+  - {fileID: 11400000, guid: 045bb8f1cf42f3145b9a7d7c0423393f, type: 2}
+  - {fileID: 11400000, guid: 75fb6aa74febc92488abe39f8b85ceed, type: 2}
