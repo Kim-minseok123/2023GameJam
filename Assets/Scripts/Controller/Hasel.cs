@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hasel : MonoBehaviour
+public class Hasel : BaseController
 {
-    void Start()
+    public override void ChangeCharacter()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        base.ChangeCharacter();
     }
 }

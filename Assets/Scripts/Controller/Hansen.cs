@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class Hansen : BaseController
 {
-    void Start()
+    public override void ChangeCharacter()
     {
-        
+        StartCoroutine(Camera.main.GetComponent<CameraController>().ZoonIn(10f));
+        GameManager.Instance.SetPlayer(this.gameObject, _coldGaugeReduced);
     }
-
-    void Update()
-    {
-        
-    }
+    
 }

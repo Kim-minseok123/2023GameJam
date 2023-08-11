@@ -16,7 +16,7 @@ public class BaseController : MonoBehaviour
 
     private Rigidbody2D _rb;
 
-    public int _coldGaugeReduced;
+    public float _coldGaugeReduced = 1;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -51,5 +51,8 @@ public class BaseController : MonoBehaviour
         transform.localScale = scale;
     }
     public virtual void UseSkill() { }
-    public virtual void ChangeCharacter() { }
+    public virtual void ChangeCharacter() {
+        StartCoroutine(Camera.main.GetComponent<CameraController>().ZoonIn(5f));
+        GameManager.Instance.SetPlayer(this.gameObject, _coldGaugeReduced);
+    }
 }
