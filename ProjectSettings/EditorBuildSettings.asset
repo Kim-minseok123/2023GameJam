@@ -4,26 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-<<<<<<< Updated upstream
-  - enabled: 1
-    path: Assets/Scenes/Builds/InitializeScene.unity
-    guid: d0de72fb71756924d87e7a2482e06b18
-  - enabled: 1
-    path: Assets/Scenes/Builds/TitleScene.unity
-    guid: 60bae220cd88ae941af17dd38e4c03a4
-  - enabled: 1
-    path: Assets/Scenes/Builds/PlayScene.unity
-    guid: bfead3afce582e5419f05179b2a80221
-  - enabled: 1
-    path: Assets/Scenes/Builds/CreditScene.unity
-    guid: 814d3276817be894cb11b66793f23345
-  - enabled: 1
-    path: Assets/Scenes/Builds/LoadingScene.unity
-    guid: 864a51563aa1bfe48a4aaa484c351319
-=======
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
->>>>>>> Stashed changes
+  m_Scenes: []
   m_configObjects: {}
