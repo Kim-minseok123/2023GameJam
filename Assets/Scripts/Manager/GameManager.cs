@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
             UIController.Instance.OpenPopup("Pause");
         }
-        PlayTime += Time.deltaTime;
+        
     }
 
     public void GameOver()
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
         //게임매니저 삭제해야함.
         UIController.Instance.OpenPopup("GameOver");
         onGameOverEvent?.Invoke();
-
+        Destroy(Player);
         Destroy(gameObject);
     }
 
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
         //게임매니저 삭제해야함.
         UIController.Instance.OpenPopup("GameClear");
         onGameClearEvent?.Invoke();
-
+        Destroy(Player);
         Destroy(gameObject);
     }
 
