@@ -15,9 +15,13 @@ public class FallCheckController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) {
+        if (collision.CompareTag("Player"))
+        {
             GameManager.Instance.SpawnPlayer(Startpos);
             GameManager.Instance.Damage(30);
+        }
+        else if (collision.CompareTag("Fail")) {
+            collision.gameObject.GetComponent<FallDownPlatform>().SetUp();
         }
     }
 }

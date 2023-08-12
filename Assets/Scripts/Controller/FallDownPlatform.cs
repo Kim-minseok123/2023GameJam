@@ -6,6 +6,7 @@ using UnityEngine;
 public class FallDownPlatform : MonoBehaviour
 {
     private new Rigidbody2D rigidbody2D;
+    private Vector3 StartPos;
 
     [SerializeField]
     private float lifeTime = 1f;
@@ -15,6 +16,7 @@ public class FallDownPlatform : MonoBehaviour
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        StartPos = transform.position;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,5 +33,9 @@ public class FallDownPlatform : MonoBehaviour
         rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
     }
 
-
+    public void SetUp() {
+        rigidbody2D.bodyType = RigidbodyType2D.Static;
+        transform.position = StartPos;
+        waitForLifeTime = null;
+    }
 }

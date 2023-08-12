@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
             if (ColdGauge <= 0)
             {
                 ColdGauge = 0;
+                GameOver();
 
             }
             Debug.Log(ColdGauge);
