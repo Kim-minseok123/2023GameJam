@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 0.1
+  sfxPrefab: {fileID: 5775100295473425794, guid: 6bc772b79a3f306418e34cdebeda7255, type: 3}
 --- !u!251 &1303916836858532167
 PlatformEffector2D:
   m_ObjectHideFlags: 0

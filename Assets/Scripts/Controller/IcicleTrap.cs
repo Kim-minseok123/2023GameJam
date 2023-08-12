@@ -17,13 +17,16 @@ public class IcicleTrap : MonoBehaviour
     [SerializeField]
     private int damage = 20;
 
+    [SerializeField]
+    private GameObject sfxPrefab;
+
     private bool isFall = false;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         boxCollider2D = GetComponent<BoxCollider2D>();
-        rigidbody2D = GetComponent<Rigidbody2D>();  
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
@@ -55,6 +58,7 @@ public class IcicleTrap : MonoBehaviour
         Debug.Log(collision.gameObject.name);
 
         animator.SetTrigger("Break");
+        Instantiate(sfxPrefab, transform.position, Quaternion.identity);
         rigidbody2D.bodyType = RigidbodyType2D.Static;
         isFall = false;
 

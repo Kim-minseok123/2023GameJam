@@ -13,6 +13,9 @@ public class FallDownPlatform : MonoBehaviour
 
     Coroutine waitForLifeTime = null;
 
+    [SerializeField]
+    private GameObject sfxPrefab;
+
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -31,9 +34,11 @@ public class FallDownPlatform : MonoBehaviour
     {
         yield return new WaitForSeconds(lifeTime);
         rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+        Instantiate(sfxPrefab, transform.position, Quaternion.identity);
     }
 
-    public void SetUp() {
+    public void SetUp()
+    {
         rigidbody2D.bodyType = RigidbodyType2D.Static;
         transform.position = StartPos;
         waitForLifeTime = null;

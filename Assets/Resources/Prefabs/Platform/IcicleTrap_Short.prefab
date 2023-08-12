@@ -123,6 +123,7 @@ MonoBehaviour:
   fallDelayTime: 0
   fallSpeed: 5
   damage: 20
+  sfxPrefab: {fileID: 8185011250651472382, guid: 88b43c47dabca914cbbe9bcbc2be4bf3, type: 3}
 --- !u!61 &2256760474603173545
 BoxCollider2D:
   m_ObjectHideFlags: 0

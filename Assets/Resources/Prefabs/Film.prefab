@@ -30,7 +30,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5380688688088331465}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -114,3 +115,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a576b9b39507e47ad2b8fdf7000cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NextScene: 
+  sfxPlayer: {fileID: 7778920952245954808}
+--- !u!1001 &2191676474677794084
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1220191686356447389}
+    m_Modifications:
+    - target: {fileID: 1596803529371220295, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: aliveSceneChange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475248109561495004, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_Name
+      value: SFXPlayer_StageClear
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475248109561495004, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+--- !u!4 &5380688688088331465 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6108690885681586669, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+  m_PrefabInstance: {fileID: 2191676474677794084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7778920952245954808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8475248109561495004, guid: 54b19d7ec9c1a074eb84d0e1c224315a, type: 3}
+  m_PrefabInstance: {fileID: 2191676474677794084}
+  m_PrefabAsset: {fileID: 0}
