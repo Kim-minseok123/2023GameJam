@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SnowBlock
   - Fail
+  - PushTrap
   layers:
   - Default
   - TransparentFX

@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     int reduced = 1;
     public GameObject Player;
 
+    private float PlayTime;
     //회로 설치 갯수
     public int StoveNumber = 3;
     private void Awake()
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
         }
         s_instance = this;
         MaxGauge = ColdGauge;
+        PlayTime = Time.time;
         DontDestroyOnLoad(gameObject);
     }
 
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour
         {
             TogglePause();
         }
+        PlayTime += Time.deltaTime;
     }
     
     public void GameOver() { 
@@ -147,4 +150,9 @@ public class GameManager : MonoBehaviour
         if(ColdGauge < 0)
         { ColdGauge = 0; }
     }
+    public int GetTime() {
+        var cur = Time.time;
+        return  (int)(cur-PlayTime);
+    }
+
 }
