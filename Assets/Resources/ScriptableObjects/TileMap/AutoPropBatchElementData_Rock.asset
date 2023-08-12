@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d9fde211d07b64bb92d759b181d715, type: 3}
+  m_Name: AutoPropBatchElementData_Rock
+  m_EditorClassIdentifier: 
+  useRuleTile: 1
+  terrainNormalTile: {fileID: 0}
+  terrainRuleTile: {fileID: 11400000, guid: 2cdaccec3c082374da452f2820902e14, type: 2}
+  elementDataList:
+  - prefab: {fileID: 8304884332476959043, guid: 902f99d4e12b3a1489b2dc0ee78c6178, type: 3}
+    useRandomPosition: 1
+    offsetPosition: {x: 0, y: 0, z: 0}
+    offsetRandomPosition:
+      min: {x: -1, y: 0, z: 0}
+      max: {x: 1, y: 0, z: 0}
+    useRandomRotation: 0
+    offsetRotation: 0
+    offsetRandomRotation:
+      min: 0
+      max: 0
+    useRandomScale: 1
+    offsetScale: 0
+    offsetRandomScale:
+      min: -0.5
+      max: 0.5
+    percent: 25
+  - prefab: {fileID: 6360374647546247158, guid: a5a1c84f5d702ff479eac9ffee55d82c, type: 3}
+    useRandomPosition: 1
+    offsetPosition: {x: 0, y: 0, z: 0}
+    offsetRandomPosition:
+      min: {x: -1, y: 0, z: 0}
+      max: {x: 1, y: 0, z: 0}
+    useRandomRotation: 0
+    offsetRotation: 0
+    offsetRandomRotation:
+      min: 0
+      max: 0
+    useRandomScale: 1
+    offsetScale: 0
+    offsetRandomScale:
+      min: -0.5
+      max: 0.5
+    percent: 25
+  - prefab: {fileID: 7289313193424897100, guid: 704c62ef56487a241803821f0d872997, type: 3}
+    useRandomPosition: 1
+    offsetPosition: {x: 0, y: 0, z: 0}
+    offsetRandomPosition:
+      min: {x: -1, y: 0, z: 0}
+      max: {x: 1, y: 0, z: 0}
+    useRandomRotation: 0
+    offsetRotation: 0
+    offsetRandomRotation:
+      min: 0
+      max: 0
+    useRandomScale: 0
+    offsetScale: 0
+    offsetRandomScale:
+      min: 0
+      max: 0
+    percent: 25
+  - prefab: {fileID: 4837767700273690512, guid: e3264ba2d8b4e794894b119cf0edaf26, type: 3}
+    useRandomPosition: 1
+    offsetPosition: {x: 0, y: 0, z: 0}
+    offsetRandomPosition:
+      min: {x: -1, y: 0, z: 0}
+      max: {x: 1, y: 0, z: 0}
+    useRandomRotation: 0
+    offsetRotation: 0
+    offsetRandomRotation:
+      min: 0
+      max: 0
+    useRandomScale: 1
+    offsetScale: 0
+    offsetRandomScale:
+      min: -0.5
+      max: 0.5
+    percent: 25
