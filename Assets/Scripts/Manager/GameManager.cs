@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     public bool isPaused = false;
 
+    public int MaxGauge;
     public int ColdGauge = 300;
 
     private float elapsedTime = 0f;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         s_instance = this;
+        MaxGauge = ColdGauge;
     }
     public void Start()
     {
