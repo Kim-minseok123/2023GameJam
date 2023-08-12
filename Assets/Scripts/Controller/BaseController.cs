@@ -43,7 +43,7 @@ public class BaseController : MonoBehaviour
         _jumpAudio = gameObject.AddComponent<AudioSource>();
     }
 
-    public void FixedUpdate()
+    public virtual void FixedUpdate()
     {
         if (!GameManager.Instance.isPaused)
         {
@@ -136,7 +136,6 @@ public class BaseController : MonoBehaviour
     }
     public virtual void ChangeCharacter()
     {
-        StartCoroutine(Camera.main.GetComponent<CameraController>().ZoonOut(5f));
         GameManager.Instance.SetPlayer(this.gameObject, _coldGaugeReduced);
         Effect.SetTrigger("EffectOn");
         AudioClipEffect.PlayOneShot(EffectSound);
