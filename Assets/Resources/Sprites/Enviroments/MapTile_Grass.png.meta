@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -147,27 +147,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapTile_Grass_3
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 32
-        width: 23
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 304772e4901497d408126ff70d0f60a7
-      internalID: 171957390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: MapTile_Grass_4
       rect:
         serializedVersion: 2
@@ -205,27 +184,6 @@ TextureImporter:
       bones: []
       spriteID: da13f79d934522f45a68fe03d5828155
       internalID: 657336524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MapTile_Grass_6
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 0
-        width: 23
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69e1a35a017acae4cb2efcede63d9a30
-      internalID: -1314849172
       vertices: []
       indices: 
       edges: []
