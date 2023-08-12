@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDontDestroy: 1
   masterMixer: {fileID: 24100000, guid: 54dd44f7699ff744184a7fc084b5a34a, type: 2}
+  allMasterVolume: 1
   bgmMasterVolume: 1
   sfxMasterVolume: 1
   bgmVolume: 1
