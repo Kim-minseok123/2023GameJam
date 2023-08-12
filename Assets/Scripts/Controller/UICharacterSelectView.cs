@@ -35,8 +35,6 @@ public class UICharacterSelectView : UIBaseView
     private UIBaseText infomationJobLabelText;
 
     [SerializeField]
-    private GameObject skillDescriptionObject;
-    [SerializeField]
     private UIBaseImage skillIconImage;
     [SerializeField]
     private UIBaseText skillNameText;
@@ -130,17 +128,6 @@ public class UICharacterSelectView : UIBaseView
         skillIconImage.SetImage(characterData.SkillIcon);
         skillNameText.SetText(characterData.SkillName);
         skillDescriptionText.SetText(characterData.SkillContext);
-    }
-
-    public void ShowSkill()
-    {
-        skillDescriptionObject.SetActive(true);
-        Debug.Log("s");
-    }
-
-    public void HideSkill()
-    {
-        skillDescriptionObject.SetActive(false);
     }
 
     public string GetSelectName()
