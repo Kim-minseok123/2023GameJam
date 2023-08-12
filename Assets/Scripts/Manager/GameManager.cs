@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
             TogglePause();
         }
     }
-
+    
     public void GameOver() { }
     public void GameClear() { }
 

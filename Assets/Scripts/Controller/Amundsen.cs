@@ -10,7 +10,8 @@ public class Amundsen : BaseController
 
     public override void Update()
     {
-        base.Update();
+        if (GameManager.Instance.isPaused)
+            return;
 
         // 점프키를 눌렀을 때
         if (Input.GetKeyDown(KeyCode.W))
