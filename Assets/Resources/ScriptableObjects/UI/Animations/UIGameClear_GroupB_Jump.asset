@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationName: 
   duration: 0.7
-  delay: 1.8
+  delay: 0.9
   animationType: 1
   easeType: 30
   easeCurve:
@@ -44,10 +44,10 @@ MonoBehaviour:
   loopCount: 0
   loopType: 0
   destinationFloat: 0
-  destinationVector: {x: 0, y: 480, z: 0}
+  destinationVector: {x: 0, y: 0, z: 0}
   destinationColor: {r: 0, g: 0, b: 0, a: 0}
   strength: 0
   vibrato: 0
   randomness: 0
-  isRelative: 1
+  isRelative: 0
   useDynamicParmeter: 0
