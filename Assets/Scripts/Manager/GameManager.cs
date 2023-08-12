@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     private float PlayTime;
     //회로 설치 갯수
     public int StoveNumber = 3;
+    public bool isEsc = false;
 
     [HideInInspector]
     public UnityEvent onGameOverEvent;
@@ -66,12 +67,13 @@ public class GameManager : MonoBehaviour
             }
             Debug.Log(ColdGauge);
         }
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !isEsc)
         {
             TogglePause();
         }
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused) {
             Time.timeScale = 0f;
+            isEsc = true;
             UIController.Instance.OpenPopup("Pause");
         }
         

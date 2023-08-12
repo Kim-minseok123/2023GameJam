@@ -12,6 +12,7 @@ public class UIPausePopup : UIBasePopup
     public override void EndClose()
     {
         base.EndClose();
+        GameManager.Instance.isEsc = false;
         Time.timeScale = 1f;
     }
 
