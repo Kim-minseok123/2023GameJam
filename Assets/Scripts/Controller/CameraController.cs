@@ -42,7 +42,7 @@ public class CameraController : MonoBehaviour
 
         }
         else {
-            Vector3 targetPos = new Vector3(player.position.x, player.position.y + 3f, this.transform.position.z);
+            Vector3 targetPos = new Vector3(player.position.x, player.position.y + 0.5f, this.transform.position.z);
 
             targetPos.x = Mathf.Clamp(targetPos.x, minCameraBoundary.x, maxCameraBoundary.x);
             targetPos.y = Mathf.Clamp(targetPos.y, minCameraBoundary.y, maxCameraBoundary.y);
@@ -51,7 +51,7 @@ public class CameraController : MonoBehaviour
         }
     }
     public void HansenSkillOn() {
-        centerPoint = new Vector3(player.position.x, player.position.y + 3f, this.transform.position.z); ;
+        centerPoint = new Vector3(player.position.x, player.position.y +0.5f, this.transform.position.z); ;
         isSkilled = true;
     }
     public void HansenSkillOff() {
