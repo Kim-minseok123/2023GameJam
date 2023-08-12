@@ -4,11 +4,35 @@ using UnityEngine;
 
 public class Hansen : BaseController
 {
-    public override void ChangeCharacter()
+    private bool isSkill = false;
+    public override void FixedUpdate()
     {
-        StartCoroutine(Camera.main.GetComponent<CameraController>().ZoonIn(10f));
-        GameManager.Instance.SetPlayer(this.gameObject, _coldGaugeReduced);
-        Effect.SetTrigger("EffectOn");
+        if (isSkill) return;
+        base.FixedUpdate();
     }
-    
+    public override void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            UseSkill();
+        }
+        if (isSkill) return;
+        base.Update();
+    }
+    public override void UseSkill()
+    {
+        base.UseSkill();
+        _rb.velocity = Vector2.zero;
+        if (!isSkill)
+        {
+            Camera.main.gameObject.GetComponent<CameraController>().HansenSkillOn();
+            isSkill = true;
+        }
+        else if (isSkill)
+        {
+            Camera.main.gameObject.GetComponent<CameraController>().HansenSkillOff();
+            isSkill = false;
+        }
+    }
+
 }
