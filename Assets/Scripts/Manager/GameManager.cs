@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public static GameManager s_instance = null;
     public static GameManager Instance { get { return s_instance; } }
 
+    public GameObject settingsWindow; 
+
+    public bool isPaused = false;
 
     public int ColdGauge = 300;
 
@@ -28,7 +31,7 @@ public class GameManager : MonoBehaviour
     }
     public void Start()
     {
-        SpawnPlayer("Olav");
+        SpawnPlayer("Amundsen");
     }
     public void Update()
     {
@@ -45,9 +48,13 @@ public class GameManager : MonoBehaviour
             if (ColdGauge <=0)
             {
                 ColdGauge = 0;
-                //SpawnPlayer("Hansen");
+
             }
-            //Debug.Log(ColdGauge);
+            Debug.Log(ColdGauge);
+        }
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            TogglePause();
         }
     }
 
@@ -78,5 +85,31 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("Failed to load the prefab from Resources");
         }
+    }
+    public void TogglePause()
+    {
+        if (isPaused)
+        {
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
+        }
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0f; // 게임을 일시 중지
+        isPaused = true;
+        settingsWindow.SetActive(true); // 캐릭터 변경 UI를 활성화
+    }
+
+    void ResumeGame()
+    {
+        Time.timeScale = 1f; // 게임 일시 중지 해제
+        isPaused = false;
+        SpawnPlayer(settingsWindow.GetComponent<SelectController>().GetSelectName());
+        settingsWindow.SetActive(false); // 캐릭터 UI를 비활성화
     }
 }
