@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIColdGauge : UIBaseGauge
+public class UIColdScreen : MonoBehaviour
 {
     [System.Serializable]
     public class RangeData
     {
-        public Sprite thermometer;
+        public GameObject icedScreen;
         public AmountRangeFloat range;
     }
 
     [SerializeField]
     private RangeData[] ranges;
 
-    [SerializeField]
-    private Image thermometerImage;
+    private int rangeIndex = 0;
+    private GameObject currentScreen;
 
     private void LateUpdate()
     {
@@ -25,18 +25,27 @@ public class UIColdGauge : UIBaseGauge
 
         var progress = (float)current / max;
 
-        UpdateGauge(progress);
-
         for (var i = 0; i < ranges.Length; ++i)
         {
             var data = ranges[i];
-            if (data.range.Contain(progress * 100f))
+            if (data.range.Contain(progress * 100f) && i != rangeIndex)
             {
-                thermometerImage.sprite = data.thermometer;
+                if (currentScreen != null)
+                {
+                    currentScreen.SetActive(false);
+                }
+
+                rangeIndex = i;
+
+                if (data.icedScreen != null)
+                {
+                    data.icedScreen.SetActive(true);
+                }
+
+                currentScreen = data.icedScreen;
 
                 break;
             }
         }
     }
-
 }

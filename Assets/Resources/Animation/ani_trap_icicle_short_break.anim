@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ani_player_green_ground
+  m_Name: ani_trap_icicle_short_break
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,17 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1012652058, guid: cf09429b5c7fc8a4090f77ffb3d5b497, type: 3}
+      value: {fileID: -490976594, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
     - time: 0.083333336
-      value: {fileID: 1747267653, guid: cf09429b5c7fc8a4090f77ffb3d5b497, type: 3}
+      value: {fileID: -1097872682, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
     - time: 0.16666667
-      value: {fileID: -1193704567, guid: cf09429b5c7fc8a4090f77ffb3d5b497, type: 3}
+      value: {fileID: 972903998, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
+    - time: 0.25
+      value: {fileID: -169852072, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
+    - time: 0.33333334
+      value: {fileID: 18994618, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
+    - time: 0.41666666
+      value: {fileID: -1467655209, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,15 +50,18 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1012652058, guid: cf09429b5c7fc8a4090f77ffb3d5b497, type: 3}
-    - {fileID: 1747267653, guid: cf09429b5c7fc8a4090f77ffb3d5b497, type: 3}
-    - {fileID: -1193704567, guid: cf09429b5c7fc8a4090f77ffb3d5b497, type: 3}
+    - {fileID: -490976594, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
+    - {fileID: -1097872682, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
+    - {fileID: 972903998, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
+    - {fileID: -169852072, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
+    - {fileID: 18994618, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
+    - {fileID: -1467655209, guid: 599d9f82559dd7847aaea6b1c5a6b102, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.25
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -71,4 +80,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.5
+    functionName: OnBreak
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
