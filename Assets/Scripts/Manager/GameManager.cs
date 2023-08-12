@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Resources;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     public bool isPaused = false;
 
     public int MaxGauge;
-    public int ColdGauge = 300;
+    public int ColdGauge = 500;
 
     private float elapsedTime = 0f;
     private float timeToReduce;
@@ -69,6 +70,10 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             TogglePause();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Time.timeScale = 0f;
+            UIController.Instance.OpenPopup("Pause");
         }
         PlayTime += Time.deltaTime;
     }
@@ -159,6 +164,11 @@ public class GameManager : MonoBehaviour
 
     void PauseGame()
     {
+        CameraController CC = Camera.main.GetComponent<CameraController>();
+        if(CC != null)
+        {
+            if (CC.isSkilled) return;
+        }
         Time.timeScale = 0f; // 게임을 일시 중지
         isPaused = true;
         settingsWindow.SetActive(true); // 캐릭터 변경 UI를 활성화

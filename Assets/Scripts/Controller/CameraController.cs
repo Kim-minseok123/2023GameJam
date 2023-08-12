@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
     public float depth = 3f;
     [SerializeField] Vector2 minCameraBoundary;
     [SerializeField] Vector2 maxCameraBoundary;
-    private bool isSkilled = false;
+    public bool isSkilled = false;
     private float moveSpeed = 8.0f; // 카메라 이동 속도
     public Vector3 centerPoint; // 중심 지점
     private float maxDistanceFromCenter = 10.0f; // 중심 지점에서 최대 거리

@@ -15,6 +15,7 @@ public class SnowBlock : MonoBehaviour
     {
         if (isGrab)
         {
+            if (Grabplayer == null) { Destroy(gameObject); return; }
             transform.position = Grabplayer.transform.position + new Vector3(0, 1.1f, 0);
         }
         else { 

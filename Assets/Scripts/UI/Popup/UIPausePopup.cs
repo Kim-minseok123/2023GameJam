@@ -12,11 +12,13 @@ public class UIPausePopup : UIBasePopup
     public override void EndClose()
     {
         base.EndClose();
-        GameManager.Instance.TogglePause();
+        Time.timeScale = 1f;
     }
 
     public void OnEnterTitle()
     {
+        Time.timeScale = 1f;
+        Destroy(GameManager.Instance.gameObject);
         SceneLoader.Instance.SwitchScene("TitleScene");
     }
 }

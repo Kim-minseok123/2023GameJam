@@ -16,6 +16,7 @@ public class Hansen : BaseController
         {
             UseSkill();
         }
+
         if (isSkill) return;
         base.Update();
     }
