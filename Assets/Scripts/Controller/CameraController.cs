@@ -35,6 +35,15 @@ public class CameraController : MonoBehaviour
             yield return null;
         }
     }
+    public IEnumerator ZoonOut(float target)
+    {
+        Camera camera = Camera.main;
+        while (camera.orthographicSize > target)
+        {
+            camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, target, Time.deltaTime / 0.5f);
+            yield return null;
+        }
+    }
     public void SetCameratoPlayer(Transform transform) {
         player = transform;
     }
