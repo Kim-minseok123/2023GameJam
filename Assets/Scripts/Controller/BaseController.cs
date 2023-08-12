@@ -155,4 +155,10 @@ public class BaseController : MonoBehaviour
         sr.enabled = true; // 깜빡이는 것을 멈추고 스프라이트를 다시 표시
         isInvincible = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Final")) {
+            GameManager.Instance.GameClear();
+        }
+    }
 }

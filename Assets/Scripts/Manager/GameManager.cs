@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
     }
     public void GameClear() {
         //게임매니저 삭제해야함.
+
     }
 
     public void SetPlayer(GameObject Player, float reduced) { 
