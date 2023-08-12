@@ -18,7 +18,7 @@ public class BaseController : MonoBehaviour
     private Rigidbody2D _rb;
 
     public float _coldGaugeReduced = 1;
-
+    private bool jumpRequested = false;
     private bool prevGround;
     void Start()
     {
@@ -34,46 +34,60 @@ public class BaseController : MonoBehaviour
         _moveInput = Input.GetAxis("Horizontal");
         _rb.velocity = new Vector2(_moveInput * _speed, _rb.velocity.y);
 
-        if (_moveInput > 0 && !_isRight)
+        if (jumpRequested)
         {
-            animator.SetBool("Walk", true);
-            Flip();
+            _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+            animator.SetTrigger("Jump");
+            _isJumping = true;
+            jumpRequested = false;
         }
-        else if (_moveInput < 0 && _isRight)
+
+        if (!_isGrounded && !_isJumping)
         {
-            animator.SetBool("Walk", true);
-            Flip();
-        }
-        if (_moveInput == 0)
-        {
-            animator.SetBool("Walk", false);
-        }
-        if (!_isGrounded && !_isJumping) {
             animator.SetTrigger("Air");
         }
-        if (_isGrounded && _isGrounded != prevGround) {
+        else if (_isGrounded && _isGrounded != prevGround)
+        {
             animator.SetTrigger("Ground");
             _isJumping = false;
         }
         prevGround = _isGrounded;
+
+
+        if (_moveInput > 0 && !_isRight)
+        {
+            Flip();
+        }
+        else if (_moveInput < 0 && _isRight)
+        {
+            Flip();
+        }
+        if (_moveInput != 0) { 
+            animator.SetBool("Walk", true);
+        }
+        else if (_moveInput == 0)
+        {
+            animator.SetBool("Walk", false);
+        }
     }
     public virtual void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) && _isGrounded) {
-            _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-            animator.SetTrigger("Jump");
-            _isJumping = true;
+        if (Input.GetKeyDown(KeyCode.W) && _isGrounded)
+        {
+            jumpRequested = true;
         }
     }
 
-    private void Flip() { 
+    private void Flip()
+    {
         _isRight = !_isRight;
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
     }
     public virtual void UseSkill() { }
-    public virtual void ChangeCharacter() {
+    public virtual void ChangeCharacter()
+    {
         StartCoroutine(Camera.main.GetComponent<CameraController>().ZoonIn(5f));
         GameManager.Instance.SetPlayer(this.gameObject, _coldGaugeReduced);
     }

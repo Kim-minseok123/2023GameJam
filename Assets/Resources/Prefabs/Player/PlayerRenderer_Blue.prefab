@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8290605118854739722}
   - component: {fileID: 8290605118854739723}
-  - component: {fileID: 8290605118854739724}
   - component: {fileID: 8290605118854739725}
   m_Layer: 0
   m_Name: PlayerRenderer_Blue
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 877253231, guid: 48dcc9f92b69b1c4d8053d7a3368bbd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -86,20 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8290605118854739724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8290605118854739726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2698f710f7c7cba409dd2148d9c6d721, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 1}
-  outlineSize: 1
 --- !u!95 &8290605118854739725
 Animator:
   serializedVersion: 5

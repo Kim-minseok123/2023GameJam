@@ -15,7 +15,7 @@ public class SnowBlock : MonoBehaviour
     {
         if (isGrab)
         {
-            transform.position = Grabplayer.transform.position + new Vector3(0, 1f, 0);
+            transform.position = Grabplayer.transform.position + new Vector3(0, 1.1f, 0);
         }
         else { 
         
@@ -29,10 +29,10 @@ public class SnowBlock : MonoBehaviour
         isGrab = false;
         if (isRight)
         {
-            transform.position = Grabplayer.transform.position + new Vector3(1f, 0.2f, 0f);
+            transform.position = Grabplayer.transform.position + new Vector3(1.2f, 0f, 0f);
         }
         else {
-            transform.position = Grabplayer.transform.position + new Vector3(-1f, 0.2f, 0f);
+            transform.position = Grabplayer.transform.position + new Vector3(-1.2f, 0f, 0f);
         }
 
     }

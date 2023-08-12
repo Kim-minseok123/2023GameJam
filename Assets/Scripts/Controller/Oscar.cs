@@ -27,7 +27,7 @@ public class Oscar : BaseController
             if (Stove != null)
             {
                 Vector3 ts = gameObject.transform.position;
-                Instantiate(Stove, ts, Quaternion.identity);
+                Instantiate(Stove, ts + new Vector3(0,0f,0), Quaternion.identity);
             }
         }
     }

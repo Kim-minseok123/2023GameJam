@@ -31,13 +31,16 @@ public class Olav : BaseController
                 isGrab = false;
             }
             else {
-                Collider2D cd = Physics2D.OverlapBox(transform.position + new Vector3(1.5f, 0, 0), new Vector2(0.5f, 0.1f), 0);
-                if (cd == null) return;
-                if (cd.gameObject.CompareTag("SnowBlock"))
-                {
-                    sn = cd.GetComponent<SnowBlock>();
-                    sn.GrabBlock(gameObject);
-                    isGrab = true;
+                Collider2D[] cd = Physics2D.OverlapBoxAll(transform.position + new Vector3(0.5f, 0, 0), new Vector2(0.5f, 0.1f), 0);
+
+                if (cd.Length == 0) return;
+                foreach (Collider2D collider in cd) {
+                    if (collider.gameObject.CompareTag("SnowBlock"))
+                    {
+                        sn = collider.GetComponent<SnowBlock>();
+                        sn.GrabBlock(gameObject);
+                        isGrab = true;
+                    }
                 }
             }
             
@@ -49,13 +52,16 @@ public class Olav : BaseController
             }
             else
             {
-                Collider2D cd = Physics2D.OverlapBox(transform.position + new Vector3(-1.5f, 0, 0), new Vector2(0.5f, 0.1f), 0);
-                if (cd == null) return;
-                if (cd.gameObject.CompareTag("SnowBlock"))
+                Collider2D[] cd = Physics2D.OverlapBoxAll(transform.position + new Vector3(-0.5f, 0, 0), new Vector2(0.5f, 0.1f), 0);
+                if (cd.Length == 0) return;
+                foreach (Collider2D collider in cd)
                 {
-                    sn = cd.GetComponent<SnowBlock>();
-                    sn.GrabBlock(gameObject);
-                    isGrab = true;
+                    if (collider.gameObject.CompareTag("SnowBlock"))
+                    {
+                        sn = collider.GetComponent<SnowBlock>();
+                        sn.GrabBlock(gameObject);
+                        isGrab = true;
+                    }
                 }
             }
         }
