@@ -101,6 +101,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -112,8 +136,8 @@ TextureImporter:
         y: 256
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,8 +157,8 @@ TextureImporter:
         y: 256
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,8 +178,8 @@ TextureImporter:
         y: 256
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,8 +199,8 @@ TextureImporter:
         y: 256
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,8 +220,8 @@ TextureImporter:
         y: 192
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,8 +241,8 @@ TextureImporter:
         y: 192
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,8 +262,8 @@ TextureImporter:
         y: 192
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,8 +283,8 @@ TextureImporter:
         y: 192
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,8 +304,8 @@ TextureImporter:
         y: 128
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,8 +325,8 @@ TextureImporter:
         y: 128
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,8 +346,8 @@ TextureImporter:
         y: 128
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,8 +367,8 @@ TextureImporter:
         y: 128
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,8 +388,8 @@ TextureImporter:
         y: 64
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,8 +409,8 @@ TextureImporter:
         y: 64
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -406,8 +430,8 @@ TextureImporter:
         y: 64
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -427,8 +451,8 @@ TextureImporter:
         y: 64
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -448,8 +472,8 @@ TextureImporter:
         y: 0
         width: 160
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -472,21 +496,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      orig_player_yellow_withDog_2: -1606713960
-      orig_player_yellow_withDog_12: 546752172
-      orig_player_yellow_withDog_1: -1491199319
-      orig_player_yellow_withDog_14: 788322454
+      orig_player_yellow_withDog_2: -660569161
+      orig_player_yellow_withDog_12: 1927378647
+      orig_player_yellow_withDog_1: 1237679734
+      orig_player_yellow_withDog_14: 546752172
       orig_player_yellow_withDog_5: -425336897
       orig_player_yellow_withDog_4: 340035982
-      orig_player_yellow_withDog_10: 1237679734
+      orig_player_yellow_withDog_10: -1248955151
       orig_player_yellow_withDog_15: -2030715544
-      orig_player_yellow_withDog_3: 278574636
+      orig_player_yellow_withDog_3: -1491199319
       orig_player_yellow_withDog_9: -1575169743
-      orig_player_yellow_withDog_11: 1927378647
-      orig_player_yellow_withDog_0: -585448452
-      orig_player_yellow_withDog_13: -1027484893
-      orig_player_yellow_withDog_8: -1248955151
-      orig_player_yellow_withDog_6: -660569161
+      orig_player_yellow_withDog_11: 278574636
+      orig_player_yellow_withDog_0: 788322454
+      orig_player_yellow_withDog_13: -585448452
+      orig_player_yellow_withDog_8: -1606713960
+      orig_player_yellow_withDog_6: -1027484893
       orig_player_yellow_withDog_7: 2127097851
       orig_player_yellow_withDog_16: -591383829
   spritePackingTag: 
