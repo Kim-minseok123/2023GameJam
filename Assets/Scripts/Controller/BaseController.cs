@@ -25,12 +25,19 @@ public class BaseController : MonoBehaviour
     private bool isMovingLeft = false;
     private bool isMovingRight = false;
 
+    private AudioSource _footAudio;
+    public AudioClip AudioClipFoot;
+    public AudioClip AudioClipJump;
+    private AudioSource _jumpAudio;
+
+    public Animator Effect;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _groundLayer);
         prevGround = _isGrounded;
-
+        _footAudio = GetComponentInChildren<AudioSource>();
+        _jumpAudio = gameObject.AddComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -38,7 +45,7 @@ public class BaseController : MonoBehaviour
         if (!GameManager.Instance.isPaused)
         {
             _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _groundLayer);
-    #if UNITY_IOS || UNITY_ANDROID
+#if UNITY_IOS || UNITY_ANDROID
             // 모바일에서 버튼 입력을 기반으로 moveInput 설정
             if(isMovingLeft)
             {
@@ -52,13 +59,16 @@ public class BaseController : MonoBehaviour
             {
                 _moveInput = 0;
             }
-    #endif
+#endif
             _moveInput = Input.GetAxis("Horizontal");
             _rb.velocity = new Vector2(_moveInput * _speed, _rb.velocity.y);
 
             if (jumpRequested)
             {
                 _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+                if (_footAudio.isPlaying) _footAudio.Stop();
+                _jumpAudio.clip = AudioClipJump;  // 변경된 오디오 소스
+                _jumpAudio.Play();
                 animator.SetTrigger("Jump");
                 _isJumping = true;
                 jumpRequested = false;
@@ -67,6 +77,7 @@ public class BaseController : MonoBehaviour
             if (!_isGrounded && !_isJumping)
             {
                 animator.SetTrigger("Air");
+                _footAudio.Stop();
             }
             else if (_isGrounded && _isGrounded != prevGround)
             {
@@ -86,10 +97,19 @@ public class BaseController : MonoBehaviour
             }
             if (_moveInput != 0 && _isGrounded && !_isJumping)
             {
+                if (!_footAudio.isPlaying)
+                {
+                    _footAudio.clip = AudioClipFoot;
+                    _footAudio.Play();
+                }
                 animator.SetBool("Walk", true);
             }
             else if (_moveInput == 0)
             {
+                if (_footAudio.isPlaying)
+                {
+                    _footAudio.Stop();
+                }
                 animator.SetBool("Walk", false);
             }
         }
@@ -99,7 +119,7 @@ public class BaseController : MonoBehaviour
     {
         if (GameManager.Instance.isPaused)
             return;
-            _moveInput = Input.GetAxis("Horizontal");
+        _moveInput = Input.GetAxis("Horizontal");
         if (Input.GetKeyDown(KeyCode.W) && _isGrounded)
         {
             jumpRequested = true;
@@ -114,11 +134,15 @@ public class BaseController : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
-    public virtual void UseSkill() { }
+    public virtual void UseSkill() {
+        Effect.SetTrigger("EffectOn");
+    }
     public virtual void ChangeCharacter()
     {
         StartCoroutine(Camera.main.GetComponent<CameraController>().ZoonOut(5f));
         GameManager.Instance.SetPlayer(this.gameObject, _coldGaugeReduced);
+        Debug.Log("s");
+        Effect.SetTrigger("EffectOn");
     }
     // 모바일용 버튼 입력 처리 메서드들
     public void OnLeftButtonDown()

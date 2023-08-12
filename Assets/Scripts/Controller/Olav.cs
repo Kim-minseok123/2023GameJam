@@ -23,7 +23,7 @@ public class Olav : BaseController
     }
     public override void UseSkill()
     {
-       
+       base.UseSkill();
         // ´«µ¢ÀÌ ºí·° Ã¼Å©
         if (_isRight) {
             if (isGrab) {
