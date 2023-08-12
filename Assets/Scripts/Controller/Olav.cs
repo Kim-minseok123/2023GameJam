@@ -41,6 +41,7 @@ public class Olav : BaseController
                         sn.GrabBlock(gameObject);
                         isGrab = true;
                         base.UseSkill();
+                        return;
                     }
                 }
             }
@@ -64,6 +65,7 @@ public class Olav : BaseController
                         sn.GrabBlock(gameObject);
                         isGrab = true;
                         base.UseSkill();
+                        return;
                     }
                 }
             }
