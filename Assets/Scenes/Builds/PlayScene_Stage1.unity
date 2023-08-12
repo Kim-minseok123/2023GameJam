@@ -3291,9 +3291,8 @@ Transform:
   - {fileID: 1798758469}
   - {fileID: 1434163491}
   - {fileID: 2029335443}
-  - {fileID: 222707855}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &58298148
 PrefabInstance:
@@ -4365,8 +4364,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 57721243}
-  m_RootOrder: 52
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &246082775
 GameObject:
