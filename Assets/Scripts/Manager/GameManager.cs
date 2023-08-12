@@ -146,6 +146,7 @@ public class GameManager : MonoBehaviour
         settingsWindow.SetActive(false); // 캐릭터 UI를 비활성화
     }
     public void Damage(int value) {
+        if (Player != null && !Player.GetComponent<BaseController>().OnDamage()) return;
         ColdGauge -= value;
         if(ColdGauge < 0)
         { ColdGauge = 0; }
