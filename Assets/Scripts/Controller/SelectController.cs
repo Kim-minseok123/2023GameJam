@@ -90,10 +90,6 @@ public class SelectController : MonoBehaviour
 
     void ScaleSetting()
     {
-        for (int i = 0; i < Player.Length; i++)
-        {
-            Debug.Log(Player[i].name);
-        }
         Player[0].localScale = Vector3.one * 0.5f;
         Player[0].GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
         Player[4].localScale = Vector3.one * 0.5f;
