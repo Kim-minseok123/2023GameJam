@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class UICharacterSelectView : UIBaseView
 {
@@ -47,6 +48,9 @@ public class UICharacterSelectView : UIBaseView
     private bool isSelection = false;
     private bool isShowSkill = false;
 
+    [SerializeField]
+    private SFXPlayer sfxPlayer;
+
     public override void Init(UIData uiData)
     {
 
@@ -63,11 +67,13 @@ public class UICharacterSelectView : UIBaseView
         if (GameManager.Instance.isPaused != true) { return; }
         if (Input.GetKeyDown(KeyCode.A) && !isSelection)
         {
+            sfxPlayer.Play();
             Prev();
             isSelection = true;  // 키가 눌러졌다고 표시
         }
         else if (Input.GetKeyDown(KeyCode.D) && !isSelection)
         {
+            sfxPlayer.Play();
             Next();
             isSelection = true;  // 키가 눌러졌다고 표시
         }
@@ -106,6 +112,7 @@ public class UICharacterSelectView : UIBaseView
                 slot.playerSlot.PlayTween("Hide");
             }
         }
+
         UpdateInfo();
     }
 
