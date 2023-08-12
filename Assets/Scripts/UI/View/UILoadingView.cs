@@ -6,6 +6,9 @@ using UnityEngine.Events;
 public class UILoadingView : UIBaseView
 {
     [SerializeField]
+    private Animator animator;
+
+    [SerializeField]
     private LoadingTipData loadingTipData;
 
     [SerializeField]
@@ -30,6 +33,7 @@ public class UILoadingView : UIBaseView
         gameObject.SetActive(true);
         loadingText.SetText(loadingTipData.GetRandomData());
         StartCoroutine(CoWaitForViewTime());
+        animator.SetTrigger("Character_" + Random.Range(0, 5));
     }
 
     private IEnumerator CoWaitForViewTime()

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsWindow: {fileID: 4128792738358497400}
   isPaused: 0
+  MaxGauge: 0
   ColdGauge: 300
   Player: {fileID: 0}
   StoveNumber: 3
@@ -60,6 +61,10 @@ PrefabInstance:
     - target: {fileID: 6543011783012078187, guid: 69e8356f9531d1f418f73ad714d64024, type: 3}
       propertyPath: m_Name
       value: UISelectCharacters
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543011783012078187, guid: 69e8356f9531d1f418f73ad714d64024, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6543011783012078190, guid: 69e8356f9531d1f418f73ad714d64024, type: 3}
       propertyPath: m_Pivot.x
