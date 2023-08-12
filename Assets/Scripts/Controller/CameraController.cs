@@ -19,7 +19,7 @@ public class CameraController : MonoBehaviour
     private void FixedUpdate()
     {
         if (player == null) return;
-        Vector3 targetPos = new Vector3(player.position.x, player.position.y + 2f, this.transform.position.z);
+        Vector3 targetPos = new Vector3(player.position.x, player.position.y + 3f, this.transform.position.z);
 
         targetPos.x = Mathf.Clamp(targetPos.x, minCameraBoundary.x, maxCameraBoundary.x);
         targetPos.y = Mathf.Clamp(targetPos.y, minCameraBoundary.y, maxCameraBoundary.y);
