@@ -32,10 +32,7 @@ public class SaveLoadSystem : Singleton<SaveLoadSystem>
         {
             Save();
         }
-    }
 
-    private void Start()
-    {
         Load();
     }
 

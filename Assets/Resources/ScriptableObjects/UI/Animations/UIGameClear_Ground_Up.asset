@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: UIGameClear_Ground_Up
   m_EditorClassIdentifier: 
   animationName: 
-  duration: 0.7
+  duration: 1
   delay: 0
   animationType: 1
   easeType: 30

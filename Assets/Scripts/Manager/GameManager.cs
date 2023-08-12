@@ -78,6 +78,8 @@ public class GameManager : MonoBehaviour
         //게임매니저 삭제해야함.
         UIController.Instance.OpenPopup("GameOver");
         onGameOverEvent?.Invoke();
+
+        Destroy(gameObject);
     }
 
     public void GameClear()
@@ -85,6 +87,8 @@ public class GameManager : MonoBehaviour
         //게임매니저 삭제해야함.
         UIController.Instance.OpenPopup("GameClear");
         onGameClearEvent?.Invoke();
+
+        Destroy(gameObject);
     }
 
     public void SetPlayer(GameObject Player, float reduced)
