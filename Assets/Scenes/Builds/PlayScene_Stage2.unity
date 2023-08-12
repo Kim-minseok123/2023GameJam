@@ -2092,7 +2092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1220191686356447390, guid: 2329333bcb3e8b24899c84f06a44f5ca, type: 3}
       propertyPath: NextScene
-      value: PlayScene_jw3
+      value: PlayScene_Stage3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2329333bcb3e8b24899c84f06a44f5ca, type: 3}

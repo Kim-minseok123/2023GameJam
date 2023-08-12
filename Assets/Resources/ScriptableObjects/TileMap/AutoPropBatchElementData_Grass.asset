@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1d9fde211d07b64bb92d759b181d715, type: 3}
-  m_Name: AutoPropBatchElementData_Rock
+  m_Name: AutoPropBatchElementData_Grass
   m_EditorClassIdentifier: 
   useRuleTile: 1
   terrainNormalTile: {fileID: 0}
   terrainRuleTile: {fileID: 11400000, guid: 2cdaccec3c082374da452f2820902e14, type: 2}
   elementDataList:
-  - prefab: {fileID: 8304884332476959043, guid: 902f99d4e12b3a1489b2dc0ee78c6178, type: 3}
+  - prefab: {fileID: 5451069543256709558, guid: efe7fe5f1137c744988729135cbfab0d, type: 3}
     useRandomPosition: 1
     offsetPosition: {x: 0, y: 0, z: 0}
     offsetRandomPosition:
@@ -32,8 +32,8 @@ MonoBehaviour:
     offsetRandomScale:
       min: -0.5
       max: 0.5
-    percent: 25
-  - prefab: {fileID: 6360374647546247158, guid: a5a1c84f5d702ff479eac9ffee55d82c, type: 3}
+    percent: 10
+  - prefab: {fileID: 4058744456291144746, guid: 0d792bfc0937cdd438c61600fcb37f18, type: 3}
     useRandomPosition: 1
     offsetPosition: {x: 0, y: 0, z: 0}
     offsetRandomPosition:
@@ -49,8 +49,8 @@ MonoBehaviour:
     offsetRandomScale:
       min: -0.5
       max: 0.5
-    percent: 25
-  - prefab: {fileID: 7289313193424897100, guid: 704c62ef56487a241803821f0d872997, type: 3}
+    percent: 40
+  - prefab: {fileID: 3849905589344362823, guid: d5e27cec433abaf4e931165257f55438, type: 3}
     useRandomPosition: 1
     offsetPosition: {x: 0, y: 0, z: 0}
     offsetRandomPosition:
@@ -66,8 +66,8 @@ MonoBehaviour:
     offsetRandomScale:
       min: 0
       max: 0
-    percent: 25
-  - prefab: {fileID: 4837767700273690512, guid: e3264ba2d8b4e794894b119cf0edaf26, type: 3}
+    percent: 40
+  - prefab: {fileID: 6535203897157404564, guid: 50db62c9aed08964ab773da508a250b4, type: 3}
     useRandomPosition: 1
     offsetPosition: {x: 0, y: 0, z: 0}
     offsetRandomPosition:
@@ -83,4 +83,4 @@ MonoBehaviour:
     offsetRandomScale:
       min: -0.5
       max: 0.5
-    percent: 25
+    percent: 40
