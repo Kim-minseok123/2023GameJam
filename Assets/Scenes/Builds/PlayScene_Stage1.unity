@@ -11789,7 +11789,7 @@ GameObject:
   - component: {fileID: 4759482081557410579}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11861,7 +11861,7 @@ GameObject:
   - component: {fileID: 4759482081777259815}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12008,7 +12008,7 @@ GameObject:
   - component: {fileID: 4759482081984286277}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12155,7 +12155,7 @@ GameObject:
   - component: {fileID: 4759482082130970373}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12377,7 +12377,7 @@ GameObject:
   - component: {fileID: 4759482082239271761}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12449,7 +12449,7 @@ GameObject:
   - component: {fileID: 4759482082437844231}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12671,7 +12671,7 @@ GameObject:
   - component: {fileID: 4759482082720548891}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12743,7 +12743,7 @@ GameObject:
   - component: {fileID: 4759482082938014741}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12890,7 +12890,7 @@ GameObject:
   - component: {fileID: 4759482082991648365}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13112,7 +13112,7 @@ GameObject:
   - component: {fileID: 4759482083043525417}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13184,7 +13184,7 @@ GameObject:
   - component: {fileID: 4759482083132575621}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13331,7 +13331,7 @@ GameObject:
   - component: {fileID: 4759482083225362887}
   m_Layer: 6
   m_Name: FallDownPlatform
-  m_TagString: Untagged
+  m_TagString: Fail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
