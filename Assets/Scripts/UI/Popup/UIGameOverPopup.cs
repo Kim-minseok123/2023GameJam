@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIGameOverPopup : UIBasePopup
 {
+
     public override void Init(UIData uiData)
     {
 

@@ -76,11 +76,14 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         //게임매니저 삭제해야함.
+        UIController.Instance.OpenPopup("GameOver");
         onGameOverEvent?.Invoke();
     }
+
     public void GameClear()
     {
         //게임매니저 삭제해야함.
+        UIController.Instance.OpenPopup("GameClear");
         onGameClearEvent?.Invoke();
     }
 
