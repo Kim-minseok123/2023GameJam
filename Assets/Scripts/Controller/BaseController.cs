@@ -47,11 +47,14 @@ public class BaseController : MonoBehaviour
     {
         if (!GameManager.Instance.isPaused)
         {
-            _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _groundLayer);
             if (!gameObject.name.Equals("Hasel"))
             {
+                _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _groundLayer);
                 Collider2D cd = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _groundLayer);
                 if (_isGrounded && cd.gameObject.CompareTag("Fail")) { jumpRequested = false; }
+            }
+            else { 
+                _isGrounded = Physics2D.OverlapBox(_groundCheck.position, new Vector2(3f,0.2f), 0, _groundLayer);
             }
             _moveInput = Input.GetAxis("Horizontal");
             _rb.velocity = new Vector2(_moveInput * _speed, _rb.velocity.y);
