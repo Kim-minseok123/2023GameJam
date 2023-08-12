@@ -19,10 +19,11 @@ public class Oscar : BaseController
     }
     public override void UseSkill()
     {
-        base.UseSkill();
+        
         // 회로 설치 횟수 확인
         if (GameManager.Instance.StoveNumber > 0) { 
             GameManager.Instance.StoveNumber--;
+            base.UseSkill();
             // 능력 사용
             var Stove = Resources.Load("Prefabs/Skill/Stove");
             if (Stove != null)

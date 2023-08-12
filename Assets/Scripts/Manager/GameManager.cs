@@ -30,11 +30,9 @@ public class GameManager : MonoBehaviour
         }
         s_instance = this;
         MaxGauge = ColdGauge;
+        DontDestroyOnLoad(gameObject);
     }
-    public void Start()
-    {
-        SpawnPlayer("Amundsen");
-    }
+
     public void Update()
     {
         if (Player != null) {
@@ -60,8 +58,12 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void GameOver() { }
-    public void GameClear() { }
+    public void GameOver() { 
+        //게임매니저 삭제해야함.
+    }
+    public void GameClear() {
+        //게임매니저 삭제해야함.
+    }
 
     public void SetPlayer(GameObject Player, float reduced) { 
         this.Player = Player;
@@ -79,9 +81,35 @@ public class GameManager : MonoBehaviour
         if (player != null)
         {
             var p = Instantiate(player, ts, Quaternion.identity).GetComponent<BaseController>();
+            p.name = p.name.Split("(Clone)")[0];
             p.ChangeCharacter();
             Camera.main.GetComponent<CameraController>().SetCameratoPlayer(p.transform);
             Destroy(old);
+        }
+        else
+        {
+            Debug.LogError("Failed to load the prefab from Resources");
+        }
+    }
+    public void SpawnPlayer(Vector3 ts)
+    {
+        GameObject old = null;
+        string name = "Amundsen";
+        if (Player != null)
+        {
+            old = Player;
+            Player = null;
+            name = old.name;
+        }
+        var player = Resources.Load($"Prefabs/Player/{name}") as GameObject;
+        if (player != null)
+        {
+            var p = Instantiate(player, ts, Quaternion.identity).GetComponent<BaseController>();
+            p.name = p.name.Split("(Clone)")[0];
+            p.ChangeCharacter();
+            Camera.main.GetComponent<CameraController>().SetCameratoPlayer(p.transform);
+            if (old != null)
+                Destroy(old);
         }
         else
         {
@@ -113,5 +141,10 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         SpawnPlayer(settingsWindow.GetComponent<SelectController>().GetSelectName());
         settingsWindow.SetActive(false); // 캐릭터 UI를 비활성화
+    }
+    public void Damage(int value) {
+        ColdGauge -= value;
+        if(ColdGauge < 0)
+        { ColdGauge = 0; }
     }
 }
