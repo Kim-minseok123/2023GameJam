@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb56a78980ca304692092cbaed94c19, type: 3}
+  m_Name: CharacterData_Yellow
+  m_EditorClassIdentifier: 
+  characterName: "\uC2A4\uBCA0\uB808 \uD558\uC140"
+  job: "\uAC1C\uC370\uB9E4 \uC6B4\uC804\uC218"
+  context: "\uC774 \uD3B8\uC9C0\uB294 \uC601\uAD6D\uC5D0\uC11C\uBD80\uD130 \uC2DC\uC791\uB418\uC5B4
+    \uB2F9\uC2E0\uC5D0\uAC8C \uC804\uB2EC\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uC774 \uD3B8\uC9C0\uB97C
+    3\uC77C \uC774\uB0B4\uC5D0 4\uBA85\uC758 \uC0AC\uB78C\uC5D0\uAC8C \uC804\uB2EC\uD558\uC9C0
+    \uC54A\uC73C\uBA74 \uD589\uC6B4\uC774 \uC0AC\uB77C\uC9C0\uACE0, \uBD88\uD589\uC774
+    \uB2F9\uC2E0\uC744 \uCC3E\uC544\uC635\uB2C8\uB2E4."
+  skillIcon: {fileID: 21300000, guid: d0604e80537a4ff4881a6182ae5afe7c, type: 3}
+  skillName: "\uCC9C\uB9AC\uC548"
+  skillContext: "\uC370\uB9E4\uB97C \uD0D1\uC2B9\uD574 \uBE60\uB978 \uC18D\uB3C4\uB85C
+    \uB3CC\uD30C \uD560 \uC218 \uC788\uB2E4."
