@@ -26,12 +26,14 @@ public class BaseController : MonoBehaviour
     private bool isMovingRight = false;
 
     public SFXPlayer _footplayer;
+    private AudioSource _footAudio;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _groundLayer);
         prevGround = _isGrounded;
         _footplayer = GetComponentInChildren<SFXPlayer>();
+        _footAudio = _footplayer.gameObject.GetComponent<AudioSource>();   
     }
 
     void FixedUpdate()
@@ -87,11 +89,14 @@ public class BaseController : MonoBehaviour
             }
             if (_moveInput != 0)
             {
-                _footplayer.Play();
+                if(!_footAudio.isPlaying)
+                    _footplayer.Play();
                 animator.SetBool("Walk", true);
             }
             else if (_moveInput == 0)
             {
+                if (_footAudio.isPlaying)
+                    _footplayer.Stop();
                 animator.SetBool("Walk", false);
             }
         }
