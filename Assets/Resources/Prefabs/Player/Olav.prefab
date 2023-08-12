@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 6786761489900658387}
   - component: {fileID: 4090922807613504203}
   - component: {fileID: 6797503400812554640}
+  - component: {fileID: 2161243780589553639}
   m_Layer: 0
   m_Name: Olav
   m_TagString: Player
@@ -402,6 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 6
+  _isRight: 1
   _jumpForce: 6.5
   _checkRadius: 0.2
   _groundCheck: {fileID: 6786761490420904382}
@@ -415,6 +417,8 @@ MonoBehaviour:
   Effect: {fileID: 417186193985164695}
   EffectSound: {fileID: 8300000, guid: 2131ffb96721c5744a35ceae3ccd9bb9, type: 3}
   AudioClipEffect: {fileID: 7361057226785867106}
+  invincibleTime: 2
+  blinkDuration: 0.3
 --- !u!61 &6797503400812554640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -424,7 +428,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6786761489900658385}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8bf653e812a35c5429f6f6898d092732, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -439,7 +443,33 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.9}
+  m_Size: {x: 1.1, y: 0.7}
+  m_EdgeRadius: 0
+--- !u!61 &2161243780589553639
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6786761489900658385}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.4}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 0.1}
   m_EdgeRadius: 0
 --- !u!1 &6786761490420904383
 GameObject:

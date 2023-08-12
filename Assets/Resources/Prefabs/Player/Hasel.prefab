@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 327950155404963476}
   - component: {fileID: 327950155404963479}
   - component: {fileID: 6993000677483794385}
+  - component: {fileID: 7191598429780826416}
   m_Layer: 0
   m_Name: Hasel
   m_TagString: Player
@@ -68,11 +69,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 327950155404963478}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8bf653e812a35c5429f6f6898d092732, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.15}
+  m_Offset: {x: 0, y: 0.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -83,7 +84,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 1}
+  m_Size: {x: 3.5, y: 0.75}
   m_EdgeRadius: 0
 --- !u!114 &6993000677483794385
 MonoBehaviour:
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 9
+  _isRight: 1
   _jumpForce: 9
   _checkRadius: 0.2
   _groundCheck: {fileID: 327950155924931065}
@@ -111,6 +113,34 @@ MonoBehaviour:
   Effect: {fileID: 3927322061891355702}
   EffectSound: {fileID: 8300000, guid: 2131ffb96721c5744a35ceae3ccd9bb9, type: 3}
   AudioClipEffect: {fileID: 4278893113611186237}
+  invincibleTime: 2
+  blinkDuration: 0.3
+--- !u!61 &7191598429780826416
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327950155404963478}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.25}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.5, y: 0.1}
+  m_EdgeRadius: 0
 --- !u!1 &327950155924931064
 GameObject:
   m_ObjectHideFlags: 0

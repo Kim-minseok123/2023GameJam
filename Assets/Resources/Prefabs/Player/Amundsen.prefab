@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2784102012556897423}
   - component: {fileID: 2784102012556897420}
   - component: {fileID: 6288319293257745419}
+  - component: {fileID: 4051311583952895097}
   m_Layer: 0
   m_Name: Amundsen
   m_TagString: Player
@@ -68,7 +69,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2784102012556897421}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8bf653e812a35c5429f6f6898d092732, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -83,7 +84,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.9}
+  m_Size: {x: 0.8, y: 0.7}
   m_EdgeRadius: 0
 --- !u!114 &6288319293257745419
 MonoBehaviour:
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 6
+  _isRight: 1
   _jumpForce: 6.5
   _checkRadius: 0.2
   _groundCheck: {fileID: 2784102013076866018}
@@ -111,6 +113,34 @@ MonoBehaviour:
   Effect: {fileID: 3869936777654940963}
   EffectSound: {fileID: 8300000, guid: 2131ffb96721c5744a35ceae3ccd9bb9, type: 3}
   AudioClipEffect: {fileID: 5480444319435132441}
+  invincibleTime: 2
+  blinkDuration: 0.3
+--- !u!61 &4051311583952895097
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784102012556897421}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.4}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 0.1}
+  m_EdgeRadius: 0
 --- !u!1 &2784102013076866019
 GameObject:
   m_ObjectHideFlags: 0
