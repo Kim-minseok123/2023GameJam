@@ -31,6 +31,8 @@ public class BaseController : MonoBehaviour
     private AudioSource _jumpAudio;
 
     public Animator Effect;
+    public AudioClip EffectSound;
+    public AudioSource AudioClipEffect;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -136,13 +138,14 @@ public class BaseController : MonoBehaviour
     }
     public virtual void UseSkill() {
         Effect.SetTrigger("EffectOn");
+        AudioClipEffect.PlayOneShot(EffectSound);
     }
     public virtual void ChangeCharacter()
     {
         StartCoroutine(Camera.main.GetComponent<CameraController>().ZoonOut(5f));
         GameManager.Instance.SetPlayer(this.gameObject, _coldGaugeReduced);
-        Debug.Log("s");
         Effect.SetTrigger("EffectOn");
+        AudioClipEffect.PlayOneShot(EffectSound);
     }
     // 모바일용 버튼 입력 처리 메서드들
     public void OnLeftButtonDown()

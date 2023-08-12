@@ -23,12 +23,12 @@ public class Olav : BaseController
     }
     public override void UseSkill()
     {
-       base.UseSkill();
         // ´«µ¢ÀÌ ºí·° Ã¼Å©
         if (_isRight) {
             if (isGrab) {
                 sn.NonGrab(_isRight);
                 isGrab = false;
+                base.UseSkill();
             }
             else {
                 Collider2D[] cd = Physics2D.OverlapBoxAll(transform.position + new Vector3(0.5f, 0, 0), new Vector2(0.5f, 0.1f), 0);
@@ -40,6 +40,7 @@ public class Olav : BaseController
                         sn = collider.GetComponent<SnowBlock>();
                         sn.GrabBlock(gameObject);
                         isGrab = true;
+                        base.UseSkill();
                     }
                 }
             }
@@ -49,6 +50,7 @@ public class Olav : BaseController
             if (isGrab) {
                 sn.NonGrab(_isRight);
                 isGrab = false;
+                base.UseSkill();
             }
             else
             {
@@ -61,6 +63,7 @@ public class Olav : BaseController
                         sn = collider.GetComponent<SnowBlock>();
                         sn.GrabBlock(gameObject);
                         isGrab = true;
+                        base.UseSkill();
                     }
                 }
             }

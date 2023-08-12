@@ -8,7 +8,7 @@ public class Hansen : BaseController
     {
         StartCoroutine(Camera.main.GetComponent<CameraController>().ZoonIn(10f));
         GameManager.Instance.SetPlayer(this.gameObject, _coldGaugeReduced);
-        Effect.SetTrigger("Effect");
+        Effect.SetTrigger("EffectOn");
     }
     
 }
