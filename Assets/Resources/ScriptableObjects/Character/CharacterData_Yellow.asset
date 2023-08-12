@@ -23,4 +23,5 @@ MonoBehaviour:
   skillIcon: {fileID: 1926922180, guid: 81f96ab5470a8d54daaee5e6081f6816, type: 3}
   skillName: "\uC370\uB9E4 \uD0D1\uC2B9"
   skillContext: "\uC370\uB9E4\uB97C \uD0D1\uC2B9\uD574 \uBE60\uB978 \uC18D\uB3C4\uB85C
-    \uB3CC\uD30C \uD560 \uC218 \uC788\uB2E4."
+    \uB3CC\uD30C \uD560 \uC218 \uC788\uB2E4. \uB0A8\uB4E4\uC740 \uC810\uD504 \uD560
+    \uC218 \uC5C6\uB294 \uBE14\uB7ED\uC744 \uC810\uD504 \uD560 \uC218 \uC788\uB2E4."

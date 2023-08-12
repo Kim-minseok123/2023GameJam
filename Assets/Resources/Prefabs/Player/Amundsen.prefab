@@ -113,6 +113,7 @@ MonoBehaviour:
   Effect: {fileID: 3869936777654940963}
   EffectSound: {fileID: 8300000, guid: 2131ffb96721c5744a35ceae3ccd9bb9, type: 3}
   AudioClipEffect: {fileID: 5480444319435132441}
+  BeAttacked: {fileID: 8300000, guid: 50c7870db7af62049be2ac9b2be1f099, type: 3}
   invincibleTime: 2
   blinkDuration: 0.3
 --- !u!61 &4051311583952895097

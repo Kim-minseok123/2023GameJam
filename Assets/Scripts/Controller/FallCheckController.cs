@@ -5,6 +5,8 @@ using UnityEngine;
 public class FallCheckController : MonoBehaviour
 {
     public Vector3 Startpos = Vector3.zero;
+    public AudioClip FlyDeath;
+    public AudioSource FlySource;
     public void Start()
     {
         GameManager.Instance.SpawnPlayer(Startpos);
@@ -18,7 +20,8 @@ public class FallCheckController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GameManager.Instance.SpawnPlayer(Startpos);
-            GameManager.Instance.Damage(30);
+            GameManager.Instance.Damage(15);
+            FlySource.PlayOneShot(FlyDeath);
         }
         else if (collision.CompareTag("Fail")) {
             collision.gameObject.GetComponent<FallDownPlatform>().SetUp();

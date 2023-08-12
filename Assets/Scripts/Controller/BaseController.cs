@@ -28,6 +28,7 @@ public class BaseController : MonoBehaviour
     public Animator Effect;
     public AudioClip EffectSound;
     public AudioSource AudioClipEffect;
+    public AudioClip BeAttacked;
 
     public float invincibleTime = 2.0f; // 무적 시간 설정 (초 단위)
     public float blinkDuration = 0.3f;  // 깜빡이는 시간 간격
@@ -143,6 +144,7 @@ public class BaseController : MonoBehaviour
         else {
             isInvincible = true;
             StartCoroutine(InvincibilityRoutine());
+            AudioClipEffect.PlayOneShot(BeAttacked);
             return true;
         }
     }

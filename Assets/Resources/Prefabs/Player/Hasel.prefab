@@ -109,10 +109,11 @@ MonoBehaviour:
   animator: {fileID: 2400376466164652144}
   _coldGaugeReduced: 2
   AudioClipFoot: {fileID: 8300000, guid: 9f5f20d666437c34aaabe2fc40379b2f, type: 3}
-  AudioClipJump: {fileID: 0}
+  AudioClipJump: {fileID: 8300000, guid: 4987fa9379ba6a943902f63be7eb7cc0, type: 3}
   Effect: {fileID: 3927322061891355702}
   EffectSound: {fileID: 8300000, guid: 2131ffb96721c5744a35ceae3ccd9bb9, type: 3}
   AudioClipEffect: {fileID: 4278893113611186237}
+  BeAttacked: {fileID: 8300000, guid: 50c7870db7af62049be2ac9b2be1f099, type: 3}
   invincibleTime: 2
   blinkDuration: 0.3
 --- !u!61 &7191598429780826416

@@ -13,11 +13,14 @@ public class Stove : MonoBehaviour
     public Sprite StoveOn;
     public Sprite StoveOff;
     private SpriteRenderer sr;
+    private AudioSource As;
+    public AudioClip Heal;
     void Start()
     {
         if(AliveTime >= 0)
             Destroy(gameObject, AliveTime);
         sr = GetComponent<SpriteRenderer>();
+        As = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -25,7 +28,11 @@ public class Stove : MonoBehaviour
         {
             sr.sprite = StoveOn;
             vfxFire.SetActive(true);
-
+            if (!As.isPlaying)
+            { 
+                As.Stop();
+                As.PlayOneShot(Heal);
+            }
             elapsedTime += Time.deltaTime;
             if (elapsedTime >= 1f)
             {
