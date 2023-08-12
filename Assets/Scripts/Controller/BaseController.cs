@@ -24,11 +24,14 @@ public class BaseController : MonoBehaviour
     //모바일용
     private bool isMovingLeft = false;
     private bool isMovingRight = false;
+
+    public SFXPlayer _footplayer;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _groundLayer);
         prevGround = _isGrounded;
+        _footplayer = GetComponentInChildren<SFXPlayer>();
     }
 
     void FixedUpdate()
@@ -84,6 +87,7 @@ public class BaseController : MonoBehaviour
             }
             if (_moveInput != 0)
             {
+                _footplayer.Play();
                 animator.SetBool("Walk", true);
             }
             else if (_moveInput == 0)
