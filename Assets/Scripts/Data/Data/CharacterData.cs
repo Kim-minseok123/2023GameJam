@@ -6,6 +6,10 @@ using UnityEngine;
 public class CharacterData : ScriptableObject
 {
     [SerializeField]
+    private string keyName;
+    public string KeyName => keyName;
+
+    [SerializeField]
     private string characterName;
     public string CharacterName => characterName;
 

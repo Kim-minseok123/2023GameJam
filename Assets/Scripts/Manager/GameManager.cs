@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Resources;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -9,7 +10,8 @@ public class GameManager : MonoBehaviour
     public static GameManager s_instance = null;
     public static GameManager Instance { get { return s_instance; } }
 
-    public GameObject settingsWindow; 
+    public GameObject settingsWindow;
+    private UICharacterSelectView uiCharacterSelectView;
 
     public bool isPaused = false;
 
@@ -24,9 +26,17 @@ public class GameManager : MonoBehaviour
     private float PlayTime;
     //회로 설치 갯수
     public int StoveNumber = 3;
+
+    [HideInInspector]
+    public UnityEvent onGameOverEvent;
+    [HideInInspector]
+    public UnityEvent onGameClearEvent;
+
+
     private void Awake()
     {
-        if (s_instance != null) {
+        if (s_instance != null)
+        {
             Destroy(gameObject);
         }
         s_instance = this;
@@ -37,7 +47,8 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
-        if (Player != null) {
+        if (Player != null)
+        {
 
             elapsedTime += Time.deltaTime;  // 경과 시간을 누적
 
@@ -47,7 +58,7 @@ public class GameManager : MonoBehaviour
                 elapsedTime -= timeToReduce;  // 경과 시간을 재설정 (이것은 경과 시간을 0으로 초기화하는 것보다 오버플로우를 방지)
             }
 
-            if (ColdGauge <=0)
+            if (ColdGauge <= 0)
             {
                 ColdGauge = 0;
 
@@ -60,23 +71,29 @@ public class GameManager : MonoBehaviour
         }
         PlayTime += Time.deltaTime;
     }
-    
-    public void GameOver() { 
-        //게임매니저 삭제해야함.
-    }
-    public void GameClear() {
-        //게임매니저 삭제해야함.
 
+    public void GameOver()
+    {
+        //게임매니저 삭제해야함.
+        onGameOverEvent?.Invoke();
+    }
+    public void GameClear()
+    {
+        //게임매니저 삭제해야함.
+        onGameClearEvent?.Invoke();
     }
 
-    public void SetPlayer(GameObject Player, float reduced) { 
+    public void SetPlayer(GameObject Player, float reduced)
+    {
         this.Player = Player;
         timeToReduce = 1f / reduced;
     }
-    public void SpawnPlayer(string name) {
+    public void SpawnPlayer(string name)
+    {
         Vector3 ts = Vector3.zero;
         GameObject old = null;
-        if (Player != null) {
+        if (Player != null)
+        {
             ts = Player.transform.position;
             old = Player;
             Player = null;
@@ -137,24 +154,27 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f; // 게임을 일시 중지
         isPaused = true;
         settingsWindow.SetActive(true); // 캐릭터 변경 UI를 활성화
+        uiCharacterSelectView = settingsWindow.GetComponent<UICharacterSelectView>();
     }
 
     void ResumeGame()
     {
         Time.timeScale = 1f; // 게임 일시 중지 해제
         isPaused = false;
-        SpawnPlayer(settingsWindow.GetComponent<SelectController>().GetSelectName());
+        SpawnPlayer(uiCharacterSelectView.GetSelectName());
         settingsWindow.SetActive(false); // 캐릭터 UI를 비활성화
     }
-    public void Damage(int value) {
+    public void Damage(int value)
+    {
         if (Player != null && !Player.GetComponent<BaseController>().OnDamage()) return;
         ColdGauge -= value;
-        if(ColdGauge < 0)
+        if (ColdGauge < 0)
         { ColdGauge = 0; }
     }
-    public int GetTime() {
+    public int GetTime()
+    {
         var cur = Time.time;
-        return  (int)(cur-PlayTime);
+        return (int)(cur - PlayTime);
     }
 
 }

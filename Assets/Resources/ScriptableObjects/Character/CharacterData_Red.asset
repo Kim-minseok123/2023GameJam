@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb56a78980ca304692092cbaed94c19, type: 3}
   m_Name: CharacterData_Red
   m_EditorClassIdentifier: 
+  keyName: Amundsen
   characterName: "\uB85C\uC54C \uC544\uBB38\uC13C"
   job: "\uB9AC\uB354"
   context: "\uC774 \uD3B8\uC9C0\uB294 \uC601\uAD6D\uC5D0\uC11C\uBD80\uD130 \uC2DC\uC791\uB418\uC5B4
