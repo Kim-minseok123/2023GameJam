@@ -212,8 +212,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewName: Pause
-  openAnimatorElementList: []
-  closeAnimatorElementList: []
+  openAnimatorElementList:
+  - tweenKey: Open
+    tweenAnimator: {fileID: 1379911373596556529}
+  closeAnimatorElementList:
+  - tweenKey: Close
+    tweenAnimator: {fileID: 1379911373596556529}
   beginOpenEvent:
     m_PersistentCalls:
       m_Calls: []
