@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4759482083271480997}
   - component: {fileID: 1303916836858532167}
   - component: {fileID: 8265192614442495923}
+  - component: {fileID: 6422267082330567965}
   m_Layer: 6
   m_Name: FallDownPlatform
   m_TagString: Fail
@@ -196,3 +197,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.87, y: 0.1}
   m_EdgeRadius: 0
+--- !u!114 &6422267082330567965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4759482083271480994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380e1a398b4fda942a91fb512f26e419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorName: 
+  animationTable:
+    keys:
+    - Show
+    - Hide
+    values:
+    - animationList:
+      - {fileID: 11400000, guid: 3ad5d42693fe27e4398a9f93477ee01a, type: 2}
+      - {fileID: 11400000, guid: 006eae97f3056464ea7eb4510c365cde, type: 2}
+    - animationList:
+      - {fileID: 11400000, guid: a38d506209512874b88423b9d005ffce, type: 2}
+      - {fileID: 11400000, guid: 584cf4a3b6f9e4a4d8d933dc82db66fc, type: 2}
+  completeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stopEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stopActionType: 0
+  autoActiveByPlay: 0
+  autoStartPlay: 0
+  resetOriginTransformByPlay: 0
+  resetOriginColorByPlay: 0
+  resetOriginTransformByStop: 0
+  resetOriginColorByStop: 0
+  ignoreTimeScaled: 0
