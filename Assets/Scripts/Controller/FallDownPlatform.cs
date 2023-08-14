@@ -6,7 +6,6 @@ using UnityEngine;
 public class FallDownPlatform : MonoBehaviour
 {
     private new Rigidbody2D rigidbody2D;
-    private ObjectTweenAnimator tweenAnimator;
     private Vector3 StartPos;
 
     [SerializeField]
@@ -22,7 +21,6 @@ public class FallDownPlatform : MonoBehaviour
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        tweenAnimator = GetComponent<ObjectTweenAnimator>();
         StartPos = transform.position;
     }
 
@@ -42,7 +40,6 @@ public class FallDownPlatform : MonoBehaviour
     IEnumerator CoWaitForLifeTime(float lifeTime)
     {
         yield return new WaitForSeconds(lifeTime);
-        tweenAnimator.PlayAnimation("Hide");
         rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
         rigidbody2D.freezeRotation = true;
         Instantiate(sfxPrefab, transform.position, Quaternion.identity);
@@ -50,7 +47,6 @@ public class FallDownPlatform : MonoBehaviour
 
     public void SetUp()
     {
-        tweenAnimator.PlayAnimation("Show");
         rigidbody2D.bodyType = RigidbodyType2D.Static;
         transform.position = StartPos;
         waitForLifeTime = null;

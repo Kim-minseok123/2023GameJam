@@ -84,7 +84,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.1, y: 0.75}
+  m_Size: {x: 2.5, y: 0.75}
   m_EdgeRadius: 0
 --- !u!114 &6993000677483794385
 MonoBehaviour:
@@ -140,7 +140,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.1, y: 0.08}
+  m_Size: {x: 2.5, y: 0.08}
   m_EdgeRadius: 0
 --- !u!1 &327950155924931064
 GameObject:
@@ -513,6 +513,10 @@ PrefabInstance:
     - target: {fileID: 6433090306563494370, guid: 6610d6a626d7f214fb9f38a6cfba363b, type: 3}
       propertyPath: m_Name
       value: PlayerRenderer_Yellow_WithDog
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433090306563494370, guid: 6610d6a626d7f214fb9f38a6cfba363b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6433090306563494374, guid: 6610d6a626d7f214fb9f38a6cfba363b, type: 3}
       propertyPath: m_RootOrder
