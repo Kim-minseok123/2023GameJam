@@ -24,6 +24,8 @@ public class Hansen : BaseController
     {
         base.UseSkill();
         _rb.velocity = Vector2.zero;
+        if(_footAudio.isPlaying)
+            _footAudio.Stop();
         if (!isSkill)
         {
             Camera.main.gameObject.GetComponent<CameraController>().HansenSkillOn();

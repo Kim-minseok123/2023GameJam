@@ -21,7 +21,7 @@ public class BaseController : MonoBehaviour
     protected bool jumpRequested = false;
     protected bool prevGround;
 
-    protected AudioSource _footAudio;
+    public AudioSource _footAudio;
     public AudioClip AudioClipFoot;
     public AudioClip AudioClipJump;
     protected AudioSource _jumpAudio;

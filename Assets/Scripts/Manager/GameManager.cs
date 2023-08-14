@@ -69,9 +69,13 @@ public class GameManager : MonoBehaviour
         }
         if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Tab)) && !isEsc && Player != null)
         {
+            if (Player.GetComponent<BaseController>()._footAudio.isPlaying)
+                Player.GetComponent<BaseController>()._footAudio.Stop();
             TogglePause();
         }
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused) {
+            if (Player.GetComponent<BaseController>()._footAudio.isPlaying)
+                Player.GetComponent<BaseController>()._footAudio.Stop();
             Time.timeScale = 0f;
             isEsc = true;
             UIController.Instance.OpenPopup("Pause");
