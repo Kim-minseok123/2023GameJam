@@ -23,6 +23,9 @@ public class CameraController : MonoBehaviour
     private void FixedUpdate()
     {
         if (player == null) return;
+        if (player.name != "Hansen") {
+            isSkilled = false;
+        }
         if (isSkilled)
         {
             Vector3 moveInput = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
