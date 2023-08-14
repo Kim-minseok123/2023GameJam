@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49572e501c19a7c4584c5e8ef887be56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 0.25
+  lifeTime: 0.2
   sfxPrefab: {fileID: 5775100295473425794, guid: 6bc772b79a3f306418e34cdebeda7255, type: 3}
 --- !u!251 &1303916836858532167
 PlatformEffector2D:

@@ -34,6 +34,7 @@ public class FallDownPlatform : MonoBehaviour
     {
         yield return new WaitForSeconds(lifeTime);
         rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+        rigidbody2D.freezeRotation = true;
         Instantiate(sfxPrefab, transform.position, Quaternion.identity);
     }
 

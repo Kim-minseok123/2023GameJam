@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallDelayTime: 0
-  fallSpeed: 5
+  fallSpeed: 3
   damage: 20
   sfxPrefab: {fileID: 8185011250651472382, guid: 88b43c47dabca914cbbe9bcbc2be4bf3, type: 3}
 --- !u!61 &6417939522432519401

@@ -51,7 +51,7 @@ MonoBehaviour:
   aliveSceneChange: 0
   autoPlay: 1
   isLoop: 0
-  autoDestroy: 0
+  autoDestroy: 1
   audioClip: {fileID: 8300000, guid: 1c6c5f0e1ce08bf42a965e7f844b4bf6, type: 3}
 --- !u!82 &3686584718700335854
 AudioSource:
