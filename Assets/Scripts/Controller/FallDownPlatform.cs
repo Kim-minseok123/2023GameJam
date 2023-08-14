@@ -10,6 +10,8 @@ public class FallDownPlatform : MonoBehaviour
 
     [SerializeField]
     private float lifeTime = 1f;
+    [SerializeField]
+    private float additionalLifeTime = 0f;
 
     Coroutine waitForLifeTime = null;
 
@@ -26,11 +28,16 @@ public class FallDownPlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && waitForLifeTime == null)
         {
-            waitForLifeTime = StartCoroutine(CoWaitForLifeTime());
+            var calTime = lifeTime;
+
+            if(collision.gameObject.name == "Hasel")
+                calTime += additionalLifeTime;
+
+            waitForLifeTime = StartCoroutine(CoWaitForLifeTime(calTime));
         }
     }
 
-    IEnumerator CoWaitForLifeTime()
+    IEnumerator CoWaitForLifeTime(float lifeTime)
     {
         yield return new WaitForSeconds(lifeTime);
         rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
