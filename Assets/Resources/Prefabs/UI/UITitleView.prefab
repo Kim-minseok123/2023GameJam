@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2222076275651300055}
   - component: {fileID: 2222076275651300073}
   - component: {fileID: 2222076275651300072}
+  - component: {fileID: 6792026480132155639}
+  - component: {fileID: 803855733788012279}
   m_Layer: 5
   m_Name: Header
   m_TagString: Untagged
@@ -33,11 +35,11 @@ RectTransform:
   m_Father: {fileID: 2222076276748388006}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 250}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 55, y: 250}
   m_SizeDelta: {x: 500, y: 150}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &2222076275651300073
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -76,6 +78,55 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6792026480132155639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222076275651300054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d0948affcd1784b9737a09468eb30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorName: 
+  animationTable:
+    keys:
+    - Open
+    values:
+    - animationList:
+      - {fileID: 11400000, guid: 6318d1b7a08b309468c0094793d10c76, type: 2}
+  completeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stopEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stopActionType: 0
+  autoActiveByPlay: 0
+  autoStartPlay: 0
+  resetOriginTransformByPlay: 0
+  resetOriginAlphaGroupByPlay: 0
+  resetOriginColorByPlay: 0
+  resetOriginSizeByPlay: 0
+  resetOriginTransformByStop: 0
+  resetOriginAlphaGroupByStop: 0
+  resetOriginColorByStop: 0
+  resetOriginSizeByStop: 0
+  ignoreTimeScaled: 0
+--- !u!225 &803855733788012279
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222076275651300054}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2222076275869013150
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,9 +300,9 @@ RectTransform:
   m_Father: {fileID: 2222076276256382227}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -43.125}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -650, y: 181.875}
   m_SizeDelta: {x: 300, y: 86.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2222076276148257574
@@ -582,7 +633,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2222076276256382226}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -595,9 +646,9 @@ RectTransform:
   m_Father: {fileID: 2222076276748388006}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -655, y: 664.99994}
   m_SizeDelta: {x: 300, y: 450}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2222076276256382229
@@ -678,9 +729,9 @@ RectTransform:
   m_Father: {fileID: 2222076276256382227}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -164.375}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -650, y: 60.625}
   m_SizeDelta: {x: 300, y: 86.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2222076276707843673
@@ -1053,6 +1104,8 @@ MonoBehaviour:
   viewName: Title
   openAnimatorElementList:
   - tweenKey: Open
+    tweenAnimator: {fileID: 6792026480132155639}
+  - tweenKey: Open
     tweenAnimator: {fileID: 2222076276148257592}
   - tweenKey: Open
     tweenAnimator: {fileID: 2222076276707843675}
@@ -1250,9 +1303,9 @@ RectTransform:
   m_Father: {fileID: 2222076276256382227}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -285.625}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -650, y: -60.625}
   m_SizeDelta: {x: 300, y: 86.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2222076276945042384
@@ -1461,9 +1514,9 @@ RectTransform:
   m_Father: {fileID: 2222076276256382227}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -406.875}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -650, y: -181.875}
   m_SizeDelta: {x: 300, y: 86.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2222076277720429356

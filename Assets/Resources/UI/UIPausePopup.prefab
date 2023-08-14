@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 2524801059983792777}
   - component: {fileID: 2524801059983792775}
   - component: {fileID: 4318965402358833610}
+  - component: {fileID: 1379911373596556529}
   m_Layer: 5
   m_Name: UIPausePopup
   m_TagString: Untagged
@@ -194,7 +195,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2524801059983792778}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -227,6 +228,46 @@ MonoBehaviour:
       m_Calls: []
   useBackground: 1
   isUnique: 1
+--- !u!114 &1379911373596556529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524801059983792778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d0948affcd1784b9737a09468eb30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorName: 
+  animationTable:
+    keys:
+    - Open
+    - Close
+    values:
+    - animationList:
+      - {fileID: 11400000, guid: dae535f7cd8302e43a4be03c60baa28c, type: 2}
+    - animationList:
+      - {fileID: 11400000, guid: a93b01aae555f8e4991c04e4cd23fcb2, type: 2}
+  completeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stopEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stopActionType: 0
+  autoActiveByPlay: 0
+  autoStartPlay: 0
+  resetOriginTransformByPlay: 0
+  resetOriginAlphaGroupByPlay: 0
+  resetOriginColorByPlay: 0
+  resetOriginSizeByPlay: 0
+  resetOriginTransformByStop: 0
+  resetOriginAlphaGroupByStop: 0
+  resetOriginColorByStop: 0
+  resetOriginSizeByStop: 0
+  ignoreTimeScaled: 1
 --- !u!1 &2644709525348229676
 GameObject:
   m_ObjectHideFlags: 0

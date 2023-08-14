@@ -1011,6 +1011,7 @@ GameObject:
   - component: {fileID: 688898167}
   - component: {fileID: 688898166}
   - component: {fileID: 688898168}
+  - component: {fileID: 688898169}
   m_Layer: 0
   m_Name: bg_GameTitle
   m_TagString: Untagged
@@ -1059,7 +1060,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 208e2eb87afdcc6449ec78965044e97d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1861489f836cbf40b686589d8263ab9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1098,6 +1099,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.68, y: 4.32, z: 0.20000026}
   m_Center: {x: 0, y: 0, z: 0.00000023841858}
+--- !u!95 &688898169
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688898165}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1a58ecda84abbf94cbc990e0a245cc6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &713712381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1295,6 +1316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1031733597}
   - component: {fileID: 1031733596}
+  - component: {fileID: 1031733598}
   m_Layer: 0
   m_Name: Fire Light
   m_TagString: Untagged
@@ -1396,6 +1418,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1031733598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031733595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9a65ad5156ba0f4ea9f615c760ccd3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 1
+  curveTime: 1
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.5
+      inSlope: -1
+      outSlope: -1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isLooped: 1
 --- !u!1001 &1034104849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1885,6 +1955,7 @@ MonoBehaviour:
   depth: 3
   minCameraBoundary: {x: -1000, y: -1000}
   maxCameraBoundary: {x: 1000, y: 1000}
+  isSkilled: 0
   centerPoint: {x: 0, y: 0, z: 0}
 --- !u!81 &1427522023
 AudioListener:
@@ -3284,7 +3355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7058824}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
