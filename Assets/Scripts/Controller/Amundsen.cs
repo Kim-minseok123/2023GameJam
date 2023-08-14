@@ -14,7 +14,7 @@ public class Amundsen : BaseController
             return;
 
         // 점프키를 눌렀을 때
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
             // 처음 점프하는 경우
             if (_isGrounded)

@@ -8,7 +8,7 @@ public class Oscar : BaseController
     public override void Update()
     {
         base.Update();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
             UseSkill();
         }

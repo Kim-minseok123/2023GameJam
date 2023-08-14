@@ -11,7 +11,8 @@ public class Olav : BaseController
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        {
             UseSkill();
         }
 

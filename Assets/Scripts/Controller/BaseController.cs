@@ -49,12 +49,12 @@ public class BaseController : MonoBehaviour
         {
             if (!gameObject.name.Equals("Hasel"))
             {
-                _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _groundLayer);
-                Collider2D cd = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _groundLayer);
+                _isGrounded = Physics2D.OverlapBox(_groundCheck.position, new Vector3(0.6f, 0.08f, 0), 0, _groundLayer); 
+                Collider2D cd = Physics2D.OverlapBox(_groundCheck.position, new Vector3(0.6f, 0.08f, 0), 0, _groundLayer);
                 if (_isGrounded && cd.gameObject.CompareTag("Fail")) { jumpRequested = false; }
             }
             else { 
-                _isGrounded = Physics2D.OverlapBox(_groundCheck.position, new Vector2(3f,0.2f), 0, _groundLayer);
+                _isGrounded = Physics2D.OverlapBox(_groundCheck.position, new Vector3(3.1f, 0.08f, 0), 0, _groundLayer);
             }
             _moveInput = Input.GetAxis("Horizontal");
             _rb.velocity = new Vector2(_moveInput * _speed, _rb.velocity.y);
@@ -116,7 +116,7 @@ public class BaseController : MonoBehaviour
         if (GameManager.Instance.isPaused)
             return;
 
-        if (Input.GetKeyDown(KeyCode.W) && _isGrounded)
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && _isGrounded)
         {
             jumpRequested = true;
         }
@@ -161,5 +161,10 @@ public class BaseController : MonoBehaviour
         }
         sr.enabled = true; // 깜빡이는 것을 멈추고 스프라이트를 다시 표시
         isInvincible = false;
+    }
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red; // 박스의 색을 빨간색으로 설정합니다.
+        Gizmos.DrawWireCube(_groundCheck.position, new Vector3(3.1f, 0.08f, 0)); // 박스를 그립니다.
     }
 }

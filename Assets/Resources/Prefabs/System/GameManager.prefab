@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746803472202762212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5392732, y: -5.744208, z: -0.29605046}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51,6 +51,13 @@ MonoBehaviour:
   ColdGauge: 300
   Player: {fileID: 0}
   StoveNumber: 3
+  isEsc: 0
+  onGameOverEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onGameClearEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &7170040196987306515
 PrefabInstance:
   m_ObjectHideFlags: 0

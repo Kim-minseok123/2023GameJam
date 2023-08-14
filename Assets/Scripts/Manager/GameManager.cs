@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
             }
             Debug.Log(ColdGauge);
         }
-        if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !isEsc)
+        if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Tab)) && !isEsc && Player != null)
         {
             TogglePause();
         }
