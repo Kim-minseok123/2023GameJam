@@ -27,7 +27,7 @@ public class Amundsen : BaseController
             {
                 // 더블 점프 로직
                 _rb.velocity = new Vector2(_rb.velocity.x, 0); // 현재 상승 중이면 속도 초기화 (선택 사항)
-                _rb.AddForce(Vector2.up * (_jumpForce * 0.8f), ForceMode2D.Impulse);
+                _rb.AddForce(Vector2.up * (_jumpForce), ForceMode2D.Impulse);
 
                 if (_footAudio.isPlaying) _footAudio.Stop();
                 _jumpAudio.clip = AudioClipJump;
