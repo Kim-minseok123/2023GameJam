@@ -63,13 +63,13 @@ public class UICharacterSelectView : UIBaseView
     public void Update()
     {
         if (GameManager.Instance.isPaused != true) { return; }
-        if (Input.GetKeyDown(KeyCode.A) && !isSelection)
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow)) && !isSelection)
         {
             sfxPlayer.Play();
             Prev();
             isSelection = true;  // 키가 눌러졌다고 표시
         }
-        else if (Input.GetKeyDown(KeyCode.D) && !isSelection)
+        else if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow)) && !isSelection)
         {
             sfxPlayer.Play();
             Next();
@@ -77,7 +77,7 @@ public class UICharacterSelectView : UIBaseView
         }
 
         // A나 D 키가 떼어졌을 때 isclick을 다시 false로 설정
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
         {
             isSelection = false;
         }
