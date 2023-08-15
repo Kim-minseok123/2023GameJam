@@ -49,12 +49,12 @@ public class BaseController : MonoBehaviour
         {
             if (!gameObject.name.Equals("Hasel"))
             {
-                _isGrounded = Physics2D.OverlapBox(_groundCheck.position, new Vector3(0.5f, 0.08f, 0), 0, _groundLayer); 
-                Collider2D cd = Physics2D.OverlapBox(_groundCheck.position, new Vector3(0.5f, 0.08f, 0), 0, _groundLayer);
+                _isGrounded = Physics2D.OverlapBox(_groundCheck.position, new Vector3(0.6f, 0.08f, 0), 0, _groundLayer); 
+                Collider2D cd = Physics2D.OverlapBox(_groundCheck.position, new Vector3(0.6f, 0.08f, 0), 0, _groundLayer);
                 if (_isGrounded && cd.gameObject.CompareTag("Fail")) { jumpRequested = false; }
             }
             else { 
-                _isGrounded = Physics2D.OverlapBox(_groundCheck.position, new Vector3(2.4f, 0.08f, 0), 0, _groundLayer);
+                _isGrounded = Physics2D.OverlapBox(_groundCheck.position, new Vector3(2.5f, 0.08f, 0), 0, _groundLayer);
             }
             _moveInput = Input.GetAxis("Horizontal");
             _rb.velocity = new Vector2(_moveInput * _speed, _rb.velocity.y);
@@ -116,7 +116,7 @@ public class BaseController : MonoBehaviour
         if (GameManager.Instance.isPaused)
             return;
 
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && _isGrounded)
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && _isGrounded)
         {
             jumpRequested = true;
         }

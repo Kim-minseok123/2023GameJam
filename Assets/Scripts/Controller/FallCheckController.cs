@@ -19,6 +19,7 @@ public class FallCheckController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("s");
             GameManager.Instance.SpawnPlayer(Startpos);
             GameManager.Instance.Damage(15);
             FlySource.PlayOneShot(FlyDeath);
