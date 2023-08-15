@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: TitleScene
-  showTime: 7
+  showTime: 10
   creaditBound: {fileID: 3290052804692532216}
   startCreaditEvent:
     m_PersistentCalls:
