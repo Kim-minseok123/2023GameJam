@@ -13,6 +13,9 @@ public class UICreaditView : MonoBehaviour
     public float showTime = 5f;
 
     [SerializeField]
+    private float fastTimeAmount = 5f;
+
+    [SerializeField]
     private RectTransform creaditBound;
 
     public UnityEvent startCreaditEvent;
@@ -29,7 +32,7 @@ public class UICreaditView : MonoBehaviour
         Canvas.ForceUpdateCanvases();
 
         startPoint = creaditBound.anchoredPosition;
-        endPoint = startPoint + Vector3.up * (creaditBound.rect.height + Screen.height + 580f);
+        endPoint = startPoint + Vector3.up * (creaditBound.rect.height + Screen.height);
         startCreaditEvent?.Invoke();
         currentShowTime = 0f;
         isUpdate = true;
@@ -44,7 +47,7 @@ public class UICreaditView : MonoBehaviour
         // 아무 키나 마우스 버튼이 눌렸을 때 크레딧을 빠르게 내리도록 조절합니다.
         if (Input.anyKey)
         {
-            currentShowTime += Time.deltaTime * 5; // 이 값을 높일수록 크레딧이 더 빨리 내려갑니다.
+            currentShowTime += Time.deltaTime * fastTimeAmount; // 이 값을 높일수록 크레딧이 더 빨리 내려갑니다.
         }
         else
         {
