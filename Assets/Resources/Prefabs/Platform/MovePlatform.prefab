@@ -312,7 +312,7 @@ MonoBehaviour:
   targetTransform: {fileID: 3015947285121470224}
   startPoint: {fileID: 3015947285077610328}
   endPoint: {fileID: 3015947285586725113}
-  moveTime: 0.7
+  moveTime: 2
 --- !u!1 &3015947285077610329
 GameObject:
   m_ObjectHideFlags: 0
