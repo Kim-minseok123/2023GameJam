@@ -81,6 +81,11 @@ public class UICharacterSelectView : UIBaseView
         {
             isSelection = false;
         }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Time.timeScale = 1f;
+            GameManager.Instance.isPaused = false;
+            gameObject.SetActive(false);
+        }
     }
 
     public void Next()
