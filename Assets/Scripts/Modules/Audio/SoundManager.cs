@@ -8,10 +8,6 @@ public class SoundManager : Singleton<SoundManager>
 {
     public const int MaxSFXPlayCount = 5;
 
-    private const float minVolumeAmount = -80f;
-    private const float maxVolumeAmount = 0f;
-
-
     [SerializeField]
     private AudioMixer masterMixer;
 
@@ -59,15 +55,15 @@ public class SoundManager : Singleton<SoundManager>
 
         bgmAudioPlayer.volume = bgmMasterVolume;
 
-        masterMixer.SetFloat("AllVolume", Mathf.Lerp(minVolumeAmount, maxVolumeAmount, allMasterVolume));
-        masterMixer.SetFloat("BGMVolume", Mathf.Lerp(minVolumeAmount, maxVolumeAmount, bgmMasterVolume));
-        masterMixer.SetFloat("SFXVolume", Mathf.Lerp(minVolumeAmount, maxVolumeAmount, sfxMasterVolume));
+        masterMixer.SetFloat("AllVolume", Mathf.Log10(allMasterVolume) * 20);
+        masterMixer.SetFloat("BGMVolume", Mathf.Log10(bgmMasterVolume) * 20);
+        masterMixer.SetFloat("SFXVolume", Mathf.Log10(sfxMasterVolume) * 20);
     }
 
     public void ChangeAllVolume(float volume) {
         allMasterVolume = volume;
         SaveLoadSystem.Instance.SaveLoadData.masterVolume = allMasterVolume;
-        masterMixer.SetFloat("AllVolume", Mathf.Lerp(minVolumeAmount, maxVolumeAmount, allMasterVolume));
+        masterMixer.SetFloat("AllVolume", Mathf.Log10(allMasterVolume) * 20);
     }
 
     public void ChangeBGMVolume(float bgm)
@@ -76,7 +72,7 @@ public class SoundManager : Singleton<SoundManager>
         bgmAudioPlayer.volume = bgmVolume * bgmMasterVolume;
         SaveLoadSystem.Instance.SaveLoadData.bgmVolume = bgmMasterVolume;
 
-        masterMixer.SetFloat("BGMVolume", Mathf.Lerp(minVolumeAmount, maxVolumeAmount, bgmMasterVolume));
+        masterMixer.SetFloat("BGMVolume", Mathf.Log10(bgmMasterVolume) * 20);
     }
 
     public void ChangeSFXVolume(float sfx)
@@ -91,7 +87,7 @@ public class SoundManager : Singleton<SoundManager>
         }
 
         SaveLoadSystem.Instance.SaveLoadData.sfxVolume = sfxMasterVolume;
-        masterMixer.SetFloat("SFXVolume", Mathf.Lerp(minVolumeAmount, maxVolumeAmount, sfxMasterVolume));
+        masterMixer.SetFloat("SFXVolume", Mathf.Log10(sfxMasterVolume) * 20);
     }
 
     public void PlayBGM(AudioClip bgm, float volume)
