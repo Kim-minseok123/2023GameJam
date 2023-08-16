@@ -16,20 +16,20 @@ public class SoundManager : Singleton<SoundManager>
     private AudioMixer masterMixer;
 
     [SerializeField]
-    private float allMasterVolume;
+    private float allMasterVolume = 1f;
     public float AllMasterVolume
     {
         get { return allMasterVolume; }
     }
 
     [SerializeField]
-    private float bgmMasterVolume;
+    private float bgmMasterVolume = 1f;
     public float BGMMasterVolume
     {
         get { return bgmMasterVolume; }
     }
     [SerializeField]
-    private float sfxMasterVolume;
+    private float sfxMasterVolume = 1f;
     public float SFXMasterVolume
     {
         get { return sfxMasterVolume; }

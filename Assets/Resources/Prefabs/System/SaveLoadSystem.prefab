@@ -47,9 +47,11 @@ MonoBehaviour:
   IsDontDestroy: 1
   saveLoadPathData: {fileID: 11400000, guid: d0e0091f2198a2543bad8a5035e2aa34, type: 2}
   saveLoadData:
-    bgmVolume: 0.5
-    sfxVolume: 0.5
-    mouseSensitivity: 300
+    masterVolume: 1
+    bgmVolume: 1
+    sfxVolume: 1
+    screenResolution: {x: 1920, y: 1080}
+    screenMode: 1
   loadEvent:
     m_PersistentCalls:
       m_Calls: []
