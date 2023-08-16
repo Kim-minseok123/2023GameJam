@@ -108,6 +108,7 @@ MonoBehaviour:
     m_Bits: 64
   animator: {fileID: 3791343797503853711}
   _coldGaugeReduced: 0.5
+  _footAudio: {fileID: 0}
   AudioClipFoot: {fileID: 8300000, guid: 9f5f20d666437c34aaabe2fc40379b2f, type: 3}
   AudioClipJump: {fileID: 8300000, guid: 4987fa9379ba6a943902f63be7eb7cc0, type: 3}
   Effect: {fileID: 3869936777654940963}
@@ -129,7 +130,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.4}
+  m_Offset: {x: 0, y: -0.38}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -140,7 +141,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.08}
+  m_Size: {x: 0.6, y: 0.1}
   m_EdgeRadius: 0
 --- !u!1 &2784102013076866019
 GameObject:
